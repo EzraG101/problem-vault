@@ -1,0 +1,41 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2008 G7}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2008 G7}
+
+\begin{statement}{2008 G7}
+	Let $ABCD$ be a convex quadrilateral with $BA \neq BC$.
+	Denote the incircles of triangles $ABC$ and $ADC$
+	by $\omega_1$ and $\omega_2$ respectively.
+	Suppose that there exists a circle $\omega$ tangent
+	to ray $BA$ beyond $A$ and to the ray $BC$ beyond $C$,
+	which is also tangent to the lines $AD$ and $CD$.
+	Prove that the common external tangents to
+	$\omega_1$ and $\omega_2$ intersect on $\omega$.
+\end{statement}
+Let $J$ be the center of $\omega$, $W,X,Y,Z$ be the tangency points of $\omega$ with lines $\seg{AB},\seg{CD},\seg{DA},\seg{BC}$, $\triangle PQR$ be the intouch triangle of $\triangle ABC$ (with $P,Q$ opposite $A,B$), $S$ be the tangency point of $\omega_2$ and $\seg{AC}$, and $T$ be the point on $\omega$ such that $\seg{JT}\perp\seg{AC}$. Using the given tangencies we have
+\begin{align*}
+	2AQ &= AQ+AR \\
+	&= AQ+BW-BR-AW \\
+	&= AQ+BZ-BP-AY \\
+	&= AQ+PZ-AD-DY \\
+	&= AQ+PC+CZ-AD-DY \\
+	&= AQ+QC+CX-AD-DX \\
+	&= AC+CD-AD.
+\end{align*} 
+However, it is well known that $2CS=AC+CD-AD$, so $AQ=CS$. Now, since $Q$ and $S$ are isotomic, this implies that $\seg{BS}$ and $\seg{DQ}$ pass through the antipodes of $Q$ and $S$ in $\omega_1$ and $\omega_2$ respectively. However, considering homotheties with centers $B$ and $D$ taking $\omega_1$ and $\omega_2$ to $\omega$ respectively, it is clear that this implies that $\seg{BT}$ and $\seg{DT}$ pass through the antipodes of $Q$ and $S$ in $\omega_1$ and $\omega_2$ respectively. Thus, it follows there is a positive homothety centered at $T$ taking $\omega_1$ to $\omega_2$, so we must have that the common external tangents of $\omega_1$ and $\omega_2$ meet at $T\in\omega$. $\blacksquare$
+	
+\end{document}
