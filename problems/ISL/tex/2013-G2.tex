@@ -1,0 +1,37 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2013 G2}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2013 G2}
+
+\begin{statement}{2013 G2}
+	Let $\omega$ be the circumcircle of a triangle $ABC$.
+	Denote by $M$ and $N$ the midpoints of the sides $AB$ and $AC$,
+	respectively, and denote by $T$ the midpoint
+	of the arc $BC$ of $\omega$ not containing $A$.
+	The circumcircles of the triangles $AMT$ and $ANT$
+	intersect the perpendicular bisectors of $AC$ and $AB$ at points $X$ and $Y$,
+	respectively; assume that $X$ and $Y$ lie inside the triangle $ABC$.
+	The lines $MN$ and $XY$ intersect at $K$.
+	Prove that $KA=KT$.
+\end{statement}
+We use directed angles$\mod180\dg$. Let $O$ be the center of $\omega$, $P$ be a point on $\omega$ such that $\seg{PT}\parallel\seg{AC}$, and $X'=\seg{PT}\cap\seg{ON}$. We have 
+\[\dang ABP = \dang ATP = \dang TAC = \dang TAB, \]
+so $\seg{PB}\parallel\seg{AT}$. Thus, $APBT$ is an isosceles trapezoid, giving $PT=AB$. Since $X'$ is the midpoint of $\seg{PT}$ (lies on its perpendicular bisector), this gives $PX'=BM$. Thus, since $BP=PB$ and 
+\[\dang PBM=\dang PBA=\dang PTA=\dang TPB = \dang X'PB\] 
+we have $PMX'B$ is an isosceles trapezoid. Thus, $\seg{MX'}\parallel\seg{PB}\parallel\seg{AT}$. Hence, $\dang TAM = \dang ATX'$ implies $X'$ lies on $(AMT)$. This gives $X'=X$, so $\seg{MX}\parallel\seg{AT}$. Analogously, $\seg{NY}\parallel\seg{AT}$.\\
+Now, since $\seg{MX}\parallel\seg{AT}\parallel\seg{NY}$, these three lines have the same perpendicular bisector. This implies that $MNYX$ is an isosceles trapezoid, so $K=\seg{MN}\cap\seg{XY}$ must lie on this common perpendicular bisector. Hence, $KA=KT$ as desired. $\blacksquare$
+	
+\end{document}
