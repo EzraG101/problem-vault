@@ -1,0 +1,39 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2019 G1}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2019 G1}
+
+\begin{statement}{2019 G1}
+	Let $ABC$ be a triangle.
+	A circle passes through $A$,
+	intersects $\seg{AB}$ and $\seg{AC}$ again at
+	$D$ and $E$ respectively,
+	and intersects $\seg{BC}$ at $F$ and $G$,
+	with $BF < BG$.
+	Let $T$ be a point such that $\seg{FT}$
+	is tangent to the circumcircle of $\triangle BDF$
+	and $\seg{GT}$ is tangent to the circumcircle
+	of $\triangle CEG$.
+	Prove that $\seg{AT} \parallel \seg{BC}$.
+\end{statement}
+We use directed angles$\mod 180\dg$. Using the tangency and cyclic pentagon $ADFGE$, we have
+\begin{align*}
+	\dang GFT = \dang BFT = \dang BDF = \dang ADF = \dang AGF \\
+	\dang TGF = \dang TGC = \dang GEC = \dang GEA = \dang GFA 
+\end{align*}
+Adding these, we obtain $-\dang FTG = -\dang FAG$, so $T$ lies on the circumcircle of $\triangle AFG$. However, we also have $\dang GFT = \dang AGF$, so $ATGF$ must be an isosceles trapezoid with $\seg{AT}\parallel\seg{GF}$, which is what we wanted to prove. $\blacksquare$
+	
+\end{document}
