@@ -1,0 +1,35 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2016 G1}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2016 G1}
+
+\begin{statement}{2016 G1}
+	In convex pentagon $ABCDE$ with $\angle B > 90\dg$,
+	let $F$ be a point on $\seg{AC}$ such that $\angle FBC = 90\dg$.
+	It is given that $FA=FB$, $DA=DC$, $EA=ED$,
+	and rays $\seg{AC}$ and $\seg{AD}$ trisect $\angle BAE$.
+	Let $M$ be the midpoint of $\seg{CF}$.
+	Let $X$ be the point such that $AMXE$ is a parallelogram.
+	Show that $\seg{FX}$, $\seg{EM}$, $\seg{BD}$ are concurrent.
+\end{statement}
+Let $D'$ be the second intersection of $\olra{AB}$ with the circumcircle of $\triangle BFC$. Now, since $\angle BAC = \angle CAD = \angle ACD$ and $\angle EDA = \angle EAD = \angle DAC$ we have $\seg{AB}\parallel\seg{CD}$ and $\seg{AC}\parallel\seg{ED}$. Now, note that
+\[ \angle CAD = \angle CAB = \angle FBA = \angle FCD', \]
+so $\seg{CD'}\parallel\seg{AD}$. Hence, since $DA=DC$, $ADCD'$ is a rhombus. Thus, $\seg{AC}$ is the perpendicular bisector of $\seg{DD'}$. However, $\seg{AC}$ is also a diameter of $(FBC)$, so reflecting over it tells us $D$ lies on this circle as well. Now, note that $E,D,X$ are collinear because of $\seg{AC}\parallel\seg{ED}$. Thus, $\angle CDX=180\dg-\angle EDC=\angle EDA =\frac12\angle CAE = \frac12\angle CMX$. Thus, since $M$ is the center of $(FBC)$, $X$ lies on the circle as well. \\
+Furthermore, we have
+\[ \angle FMX = 180\dg-\angle MAE =2(90\dg-\angle CAD)=2\angle BCD, \]
+so $FDXB$ must be an isosceles trapezoid. Finally, note that $\angle FXD = \angle FCD = \angle FAD$, so parallelogram $AMXE$ implies $AFXD$ and $FMDE$ are parallelograms. Since $MF=MD$, we have $EF=ED$, so $\olra{ME}$ is the perpendicular bisector of $\seg{FD}$. Since $FDXB$ is an isosceles trapezoid, it follows by symmetry that $\seg{FX},\seg{EM},\seg{BD}$ concur. $\blacksquare$
+	
+\end{document}
