@@ -1,0 +1,31 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2020 G1}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2020 G1}
+
+\begin{statement}{2020 G1}
+	Let $ABC$ be an isosceles triangle with $BC=CA$, and let $D$ be a point inside side $AB$ such that $AD< DB$. Let $P$ and $Q$ be two points inside sides $BC$ and $CA$, respectively, such that $\angle DPB = \angle DQA = 90^{\circ}$. Let the perpendicular bisector of $PQ$ meet line segment $CQ$ at $E$, and let the circumcircles of triangles $ABC$ and $CPQ$ meet again at point $F$, different from $C$. \\
+	Suppose that $P$, $E$, $F$ are collinear. Prove that $\angle ACB = 90^{\circ}$.
+\end{statement}
+We use directed angles$\mod 180\dg$. Let $M$ be the midpoint of $\seg{AB}$, $D'$ be the second intersection of $\seg{CD}$ with $(ABC)$ and $T$ be the second intersection of $\seg{FB}$ with $(CPQ)$. First, since $\dang CPD=\dang CQD=90\dg$, we have $D\in(PCFQ)$. Then,
+\[ \dang FDQ=\dang FPQ=\dang EPQ=\dang PQE=\dang PQC=\dang PDC, \]
+so $\seg{DC}$ and $\seg{DF}$ are isogonal with respect to $\triangle PDQ$. Since $\seg{CD}$ is a diameter, it follows $\seg{DF}$ is perpendicular to $\seg{PQ}$. Now, note that $F$ is the Miquel point of $ABPQ$ and $D'BPD$, so by spiral similarity it follows $\seg{FD'}$ is perpendicular to $\seg{AB}$. Now,
+\[ \dang FBA=\dang FCA=\dang FCQ=\dang FTQ, \]
+so $\seg{BA}\parallel\seg{TQ}$. Also, since $\triangle ABC$ is isosceles, $\seg{CM}\perp\seg{AB}$, so $M\in(PTDQFC)$. Thus, $MDQT$ is an isosceles trapezoid. This means
+\[ \dang AFD'=\dang ACD'=\dang QCD=\dang MFT=\dang MFB, \]
+so $\seg{FD'}$ and $\seg{FM}$ are isogonal with respect to $\triangle BFA$. Since $\seg{FD'}\perp\seg{AB}$, it follows $\seg{FM}$ passes through the center of $(ABC)$, so it must be $M$. Thus, $\seg{AB}$ is a diameter and $\dang ACB=90\dg$ as desired. $\blacksquare$
+	
+\end{document}
