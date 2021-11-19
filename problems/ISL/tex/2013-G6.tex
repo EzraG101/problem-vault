@@ -1,0 +1,33 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2013 G6}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2013 G6}
+
+\begin{statement}{2013 G6}
+	Let the excircle of triangle $ABC$ opposite
+	the vertex $A$ be tangent to the side $BC$ at the point $A_1$.
+	Define the points $B_1$ on $CA$ and $C_1$ on $AB$ analogously,
+	using the excircles opposite $B$ and $C$, respectively.
+	Suppose that the circumcenter of triangle $A_1B_1C_1$ lies
+	on the circumcircle of triangle $ABC$.
+	Prove that triangle $ABC$ is right-angled.
+\end{statement}
+Let $M_A, M_B, M_C$ be the midpoints of arcs $\arc{CAB}, \arc{ABC}, \arc{BCA}$ and $I_A,I_B,I_C$ be the $A,B,C-$excenters of $\triangle ABC$ respectively. It is well known that $\triangle ABC$ and $\triangle M_AM_BM_C$ are the orthic and medial triangles of $\triangle I_AI_BI_C$ respectively. Now, since $\seg{BC}$ and $\seg{I_BI_C}$ are anti-parallel and $\seg{I_AA_1}\perp\seg{BC}$, we know the circumcenter $O$ of $\triangle I_AI_BI_C$ lies on $I_AA_1$. Analogously, $O$ lies on $I_BB_1$. Thus, $A_1B_1C$ lie on the circle with diameter $\seg{OC}$. Since $\angle OM_CC=90^{\circ}$, $M_C$ also lies on this circle, so we have $A_1B_1CM_C$ is cyclic. Analogously, $B_1C_1AM_A$ and $C_1A_1BM_B$ are cyclic. \\
+These cyclic quads imply there is a spiral similarity with center $M_A$ taking $\seg{C_1B_1}$ to $\seg{BC}$ (and analogous). Since $M_A$ is on the perpendicular bisector of $\seg{BC}$, it must be on the perpendicular bisector of $\seg{C_1B_1}$ as well (and analogous). Now, if the circumcenter of $\triangle A_1B_1C_1$ lies on the circumcircle of $\triangle ABC$, $\triangle A_1B_1C_1$ must be obtuse. WLOG assume $\angle B_1A_1C_1>90^\circ$, then it is clear that the circumcenter must be $M_A$ since it lies on the circle, on the perpendicular bisector and is on the right side of $\seg{B_1C_1}$. Now, 
+\[ \angle BAC = \angle B_1M_AC_1 = \angle B_1MA_1 +\angle A_1MC_1 = 2\angle M_CM_AA_1 + 2\angle A_1M_AM_B = 2\angle M_CM_AM_B = 180^\circ-\angle BAC, \]
+giving $\angle BAC=90^\circ$. $\blacksquare$ 
+	
+\end{document}
