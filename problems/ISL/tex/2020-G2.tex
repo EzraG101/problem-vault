@@ -1,0 +1,35 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2020 G2}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2020 G2}
+
+\begin{statement}{2020 G2}
+	Consider the convex quadrilateral $ABCD$.
+	The point $P$ is in the interior of $ABCD$.
+	The following ratio equalities hold:
+	\[\angle PAD:\angle PBA:\angle DPA
+	= 1:2:3
+	= \angle CBP:\angle BAP:\angle BPC.\]
+	Prove that the following three lines meet in a point:
+	the internal bisectors of angles $\angle ADP$ and $\angle PCB$
+	and the perpendicular bisector of segment $AB$.
+\end{statement}
+Let $R$ and $S$ be points on $\seg{DA}$ and $\seg{BC}$ such that $\olra{BR}$ and $\olra{AS}$ are the interior angle bisectors of $\angle PBA$ and $\angle BAP$ respectively. Then, the angle ratios give
+\[ \angle PAR = \angle PBR,  \]
+so $RABP$ is cyclic. Since $\angle RBA = \angle PBR$, we have $\angle RPA = \angle PAR$. Thus, $\angle PRD = 2\angle PAR$ from the exterior angle theorem. Also, from the angle ratios we have $\angle RPD = 2\angle PAR$. Hence, $\triangle DRP$ is isosceles with $D$ as its vertex, so the internal angle bisector of $\angle ADP$ is the perpendicular bisector of $\seg{RP}$. Analogously, $SBAP$ is cyclic and the interior angle bisector of $\angle PCB$ is the perpendicular bisector of $\seg{PS}$. Since $ARPSB$ is cyclic, the perpendicular bisectors of $\seg{RP},\seg{PS}$, and $\seg{AB}$ concur at its circumcenter, giving the desired result. $\blacksquare$ \\\\
+\textbf{Remark.} I solved this in contest!!!
+	
+\end{document}
