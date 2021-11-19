@@ -1,0 +1,40 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2013 N8}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2003 N8}
+
+\begin{statement}{2003 N8}
+	Let $p$ be a prime number and let $A$ be a set of positive integers that satisfies the following conditions:
+	
+	\begin{enumerate}[label=(\roman*)]
+	\item the set of prime divisors of the elements in $A$ consists of $p-1$ elements;
+	
+	\item for any nonempty subset of $A$, the product of its elements is not a perfect $p$-th power.
+	\end{enumerate}
+	
+	What is the largest possible number of elements in $A$ ?
+\end{statement}
+We claim the answer is $(p-1)^2$. This is achievable by taking the set
+\[ A = \{ q_i^{pj+1}\vert(i,j)\in\{1,\ldots,p-1\}^2 \} \]
+where $\{q_i\}_{i=1}^{\infty}$ is the sequence of primes. Now we show $\abs A>(p-1)^2$ is impossible. Let $n=\abs A$. Note that by condition (i) we can represent the elements of $A$ as vectors in $\FF_p^{p-1}$. Let these be
+\[ v_i = (e_{i1},\ldots,e_{i(p-1)})\text{ for } 1\le i\le n. \]
+Now, we define $f_j\colon\FF_p^n\rightarrow\FF_p^n$ as 
+\[ f_j(x_1,\ldots,x_n) = \sum_{i=1}^n x_i^{p-1}e_{ji}. \]
+Consider the system of equations $f_j(x_1,\ldots,x_n)=0$ for $1\le j\le p-1$. Note that $(0,\ldots,0)$ is a trivial solution. Suppose for the sake of contradiction that $n>(p-1)^2$. Then, we have
+\[ n>(p-1)^2=(p-1)\cdot(p-1)=\sum_{j=1}^{p-1}\deg(f_j). \]
+Thus, quoting \emph{Chevalley's Theorem} there must exist a nontrivial solution to the system. However, since $x_i^{p-1}\in{0,1}$, this nontrivial solution specifies a nonempty subset of $A$ for which the product is a perfect $p-$th power, yielding the desired contradiction. $\blacksquare$
+
+\end{document}

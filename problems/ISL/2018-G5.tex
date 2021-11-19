@@ -1,0 +1,30 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2018 G5}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2018 G5}
+
+\begin{statement}{2018 G5}
+	Let $ABC$ be a triangle with circumcircle $\Omega$ and incentre $I$. A line $\ell$ intersects the lines $AI$, $BI$, and $CI$ at points $D$, $E$, and $F$, respectively, distinct from the points $A$, $B$, $C$, and $I$. The perpendicular bisectors $x$, $y$, and $z$ of the segments $AD$, $BE$, and $CF$, respectively determine a triangle $\Theta$. Show that the circumcircle of the triangle $\Theta$ is tangent to $\Omega$.
+\end{statement}
+We use directed angles$\mod180^\circ$. Let $X=y\cap z$ and define $Y,Z$ similarly. Let $T$ be where the reflection of $\ell$ over $\seg{YZ}$ meets $\Omega$. We show the reflections of $\ell$ over the sides of $\Theta$ all meet at $T$. Let $T'$ be the reflection of $T$ over $\seg{YZ}$ and $T''$ the reflection of $T$ over $\seg{ZX}$. Then,
+\[ \dang EDI = \dang T'DA = \dang DAT = \dang M_AAT. \]
+Now, 
+\[ \dang BET''=\dang TBE=\dang TBM_B=\dang TBM_A+\dang M_ABM_B=90^\circ-\dang ACI-\dang M_AAT=-\dang EDI-\dang DIE=\dang IED=\dang BED,  \]
+so $T''$ is on $\ell$. Analogously with $\seg{XY}$, we conclude the reflections of $\ell$ over the sides of $\Theta$ concur at $T$.\\
+Now, this implies that the feet of the perpendicular from $T$ to the sides of $\Theta$ are collinear. Thus, $T$ has a Simson line wrt. $\Theta$ so it must lie on its circumcircle. Now, this implies as well that $H$, the orthocenter of $\Theta$, lies on $\ell$. Now, consider the reflections of $H$ over the sides of $\Theta$. It is well known these lie on its circumcircle. Also, the triangle formed by these reflections is similar to $\triangle ABC$. Since $H$ is in $\ell$ it follows these triangles are homothetic and by our above work lines connecting corresponding vertices concur at $T$. Hence, $T$ is the center of homothety from $(XYZ)$ to $(ABC)$, so these are tangent. $\blacksquare$
+
+	
+\end{document}

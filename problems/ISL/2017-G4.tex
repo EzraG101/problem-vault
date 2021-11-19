@@ -1,0 +1,28 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2017 G4}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2017 G4}
+
+\begin{statement}{2017 G4}
+	In triangle $ABC$, let $\omega$ be the $A$-excircle. Let $D,E,F$ be the points where $\omega$ is tangent to $BC,CA,AB$ respectively. The circle $AEF$ intersects $BC$ at $P$ and $Q$. Let $M$ be the midpoint of $AD$. Prove that $(MPQ)$ is tangent to $\omega$.
+\end{statement}
+Let $I_A$ be the $A$-excenter. Then, since $\angle AFI_A=\angle AEI_A=90^{\circ}$, $(APFI_AEQ)$ has diameter $AI_A$. Let $N$ be the midpoint of $\seg{AI_A}$. Then, from midpoints $\seg{MN}\parallel\seg{DI_A}\perp\seg{PQ}$. Since $NP=NQ$, $M$ lies on the perpendicular bisector of $\seg{PQ}$ so $M$ is the midpoint of arc $\widehat{PMQ}$. Now, let $T$ be the second intersection of $\ray{AD}$ with $\omega$ and $K$ be the midpoint of $\seg{DT}$. Since $I_AK\perp DT$, $K$ lies on $(APFI_AEQ)$. Hence, 
+\[ DM\cdot DT=\frac12 DA\cdot 2DK=DA\cdot DK=DP\cdot DQ, \]
+giving $T$ on $(MPQ)$. Now, let $O$ be the intersection of lines $\seg{TI_A}$ and $\seg{MN}$. We have 
+\[\angle OMT = \angle I_ADT = \angle I_ATD = \angle OTM,\] 
+so $O$ lies on the perpendicular bisector of $\seg{MT}$. Since it also lies on the perpendicular bisector of $\seg{PQ}$, $O$ is the center of $(MPTQ)$. Since $O,I_A,T$ are collinear, $(MPQ)$ and $\omega$ are tangent at $T$. $\blacksquare$ 
+	
+\end{document}
