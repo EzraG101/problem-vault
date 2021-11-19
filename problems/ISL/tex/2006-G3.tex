@@ -1,0 +1,30 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2006 G3}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2006 G3}
+
+\begin{statement}{2006 G3}
+	Let $ ABCDE$ be a convex pentagon such that
+	\[
+	\angle BAC = \angle CAD = \angle DAE\qquad \text{and}\qquad \angle ABC = \angle ACD = \angle ADE.
+	\]
+	The diagonals $BD$ and $CE$ meet at $P$.  Prove that the line $AP$ bisects the side $CD$.
+\end{statement}
+Note that there is a spiral similarity with center $A$ taking $B\rightarrow C\rightarrow D\rightarrow E$. Thus, the spiral similarity takes $\seg{BD}$ to $\seg{CE}$. Therefore, since $P=\seg{BD}\cap\seg{CE}$, we have $AEDP$ and $ABCP$ cyclic. Thus, since $\angle CBP = \angle DCP$ from the spiral similarity, we have
+\[ \angle DCP = \angle CBP = \angle CAP, \]
+giving $(ABCP)$ tangent to $\seg{CD}$. Analogously, $(AEDP)$ is tangent to $\seg{CD}$. Thus, since $\seg{AP}$ is the radical axis of these two circles, it bisects their common external tangent $\seg{CD}$. $\blacksquare$
+	
+\end{document}
