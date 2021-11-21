@@ -1,0 +1,39 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2019 G4}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2019 G4}
+
+\begin{statement}{2019 G4}
+	Let $P$ be a point inside a triangle $ABC$.
+	Let $A_1 = \seg{AP} \cap \seg{BC}$,
+	and let $A_2$ denote the reflection of $P$ over $A_1$.
+	Define $B_1$, $B_2$, $C_1$, $C_2$ similarly.
+	Prove that $A_2$, $B_2$, $C_2$ cannot all lie strictly
+	inside the circumcircle of $\triangle ABC$.
+\end{statement}
+\bary ABC Further, let $P=(p,q,r)$. Then, $A_1=(0:q:r)=(0,q/(q+r),r/(q+r))$. Thus,
+\[ A_2 = 2A_1-P=(-p,2q/(q+r)-q,2r/(q+r)-r). \]
+Now, if $A_2$ lies strictly inside the circumcircle, we must have its power to be negative. Its power is
+\[-a^2\cdot\frac{2q-q(q+r)}{q+r}\cdot\frac{2r-r(q+r)}{q+r}+b^2p\cdot\frac{2r-r(q+r)}{q+r}+c^2p\frac{2q-q(q+r)}{q+r},\]
+which simplifies as 
+\[ \frac{-4a^2qr+4a^2qr(q+r)-a^2qr(q+r)^2+2b^2pr-b^2pr(q+r)+2c^2pq-c^2pq(q+r)}{q+r}. \]
+Recalling $p+q+r=1$, we can rewrite this as
+\[ \frac{-a^2qr(p+1)^2+b^2pr(p+1)+c^2pq(p+1)}{q+r}=\frac{p+1}{q+r}\cdot(-a^2qr(p+1)+b^2pr+c^2pq) \]
+Now, if this power is negative, it implies $-a^2qr(p+1)+b^2pr+c^2pq<0$. Adding the analogous inequalities for $B_2,C_2$ gives 
+\[ a^2qr(1-p)+b^2pr(1-q)+c^2(1-r)<0, \]
+which contradicts $p,q,r<1$. Thus, $A_2,B_2,C_2$ cannot all lie strictly inside $(ABC)$. $\blacksquare$
+	
+\end{document}
