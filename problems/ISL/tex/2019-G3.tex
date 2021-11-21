@@ -1,0 +1,59 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2019 G3}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2019 G3}
+
+\begin{statement}{2019 G3}
+	In triangle $ABC$ point $A_1$ lies on side $BC$
+	and point $B_1$ lies on side $AC$.
+	Let $P$ and $Q$ be points on segments $AA_1$ and $BB_1$,
+	respectively, such that $\seg{PQ} \parallel \seg{AB}$.
+	Point $P_1$ is chosen on ray $PB_1$ beyond $B_1$
+	such that $\angle PP_1C = \angle BAC$.
+	Point $Q_1$ is chosen on ray $QA_1$ beyond $A_1$
+	such that $\angle CQ_1Q = \angle CBA$.
+	Prove that points $P_1$, $Q_1$, $P$, $Q$ are cyclic.
+\end{statement}
+\bary ABC Since $\seg{PQ}\parallel\seg{AB}$, we have $P=(u_1:v_1:1) Q=(u_2:v_2:1)$ where $u_1+v_1=u_2+v_2$. Now, $A_1=(0:v_1:1)$ and $B_1=(u_2:0:1)$. Let $X$ and $Y$ be the intersection points of $\seg{PB_1}$ and $\seg{QA_1}$ with side $\seg{AB}$ respectively. By the angle condition, $AXCP_1$ and $BYCQ_1$ are cyclic. Also, by Reims' it suffices to show $P_1Q_1XY$ is cyclic. By radical center, it then suffices to show $\seg{A_1Y},\seg{B_1X}$ and the radical axis of $(ACX),(BCY)$ concur. Now, using that $P,B_1,X$ are collinear, if $X=(x_1:y_1:0)$,
+\[ \begin{vmatrix}
+	u_1&v_1&1\\
+	u_2&0&1\\
+	x_1&y_1&0
+\end{vmatrix}=0, \]
+which implies $x_1:y_1=u_1-u_2:v_1$. Thus, $X=(u_1-u_2:v_1:0)$. Analogously, $Y=(u_2:v_2-v_1:0)$. From here, via determinants we obtain
+\begin{align*}
+	\seg{A_1Y}&\colon +x(v_2-v_1)-y(u_2)+z(v_1u_2)=0\\
+	\seg{B_1X}&\colon -x(v_1)+y(u_1-u_2)+z(v_1u_2)=0
+\end{align*}
+Now we compute the equations of $(ACX)$ and $(BCY)$. Substituting the points $A,C,X$ into the formula, we see that 
+\[ -c^2(u_1-u_2)v_1+(v_2)\beta v_1=0, \]
+so $\beta=\frac{c^2(u_1-u_2)}{v_2}$. Thus,
+\[ (ACX)\colon -a^2yz-b^2zx-c^2yz+(x+y+z)\frac{c^2(u_1-u_2)}{v_2}y=0. \]
+Analogously, 
+\[ (ACX)\colon -a^2yz-b^2zx-c^2yz+(x+y+z)\frac{c^2(v_2-v_1)}{u_1}x=0. \]
+Subtracting these two and using $u_1-u_2=v_2-v_1$, we see the radical axis of both circles is given by $v_2x-u_1y=0$. Now, 
+\[ \begin{vmatrix}
+	v_2&-u_1&0\\
+	v_2-v_1&-u_2&v_1u_2\\
+	-v_1&u_1-u_2&v_1u_2
+\end{vmatrix} = \begin{vmatrix}
+	v_2&-u_1&0\\
+	v_2&-u_1&0\\
+	-v_1&u_1-u_2&v_1u_2
+\end{vmatrix}=0, \]
+so the three lines concur as desired. $\blacksquare$
+	
+\end{document}
