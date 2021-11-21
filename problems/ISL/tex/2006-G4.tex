@@ -1,0 +1,52 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2006 G4}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2006 G4}
+
+\begin{statement}{2006 G4}
+	A point $D$ is chosen on the side $AC$ of a triangle $ABC$ with $\angle C < \angle A < 90^\circ$ in such a way that $BD=BA$. The incircle of $ABC$ is tangent to $AB$ and $AC$ at points $K$ and $L$, respectively. Let $J$ be the incenter of triangle $BCD$. Prove that the line $KL$ intersects the line segment $AJ$ at its midpoint.
+\end{statement}
+\bary ABC Let $E$ be the foot of the height from $B$ to $\seg{AC}$, $P$ be the point where the interior angle bisector of $\angle BDC$ meets $\seg{BC}$ and $M$ be the midpoint of $\seg{AJ}$. First, since $\triangle ABD$ is isosceles, we know $E$ is the midpoint of $\seg{AD}$. Then, since $E=(S_bSc:0:S_aS_b)=(S_c/b^2,0,S_a/b^2)$ we have
+\[ D=2M-A=\left(\frac{a^2-c^2}{b^2},0,\frac{2S_a}{b^2}\right)=\left(\frac{a^2-c^2}{b},0,\frac{2S_a}{b}\right). \]
+Note that $\frac{a^2-c^2}b+0+\frac{2S_a}b=b$. Therefore, $AD=\frac{2S_a}b$ and $DC=\frac{a^2-c^2}b$. By the angle bisector theorem, this implies
+\[ CP\colon BP = DC\colon BD = \frac{a^2-c^2}b\colon c = (a^2-c^2)\colon bc. \]
+Hence, $P=(0:a^2-c^2:bc)$. Now, since $J$ lies on line $\seg{CI}$, we have $J=(a:b:t)$ for some $t$. Since $J$ lies on $\seg{DP}$ we then have
+\[ \begin{vmatrix}
+	0&a^2-c^2&bc\\a^2-c^2&0&2S_a\\a&b&t
+\end{vmatrix}=0. \]
+Solving for $t$ gives 
+\[ t=\frac{2aS_a+b^2c}{a^2-c^2}, \]
+so $J=\left(a:b:\frac{2aS_a+b^2c}{a^2-c^2}\right)$. Normalizing,
+\[ J = \left(\frac{a(a^2-c^2)}{b(a+c)(a+b-c)},\frac{b(a^2-c^2)}{b(a+c)(a+b-c)},\frac{2aS_a+b^2c}{b(a+c)(a+b-c)}\right). \]
+Now, $M=(A+J)/2$ so
+\[ M=\left(\frac{a(a^2-c^2)+b(a+c)(a+b-c)}{2b(a+c)(a+b-c)},\frac{b(a^2-c^2)}{2b(a+c)(a+b-c)},\frac{2aS_a+b^2c}{2b(a+c)(a+b-c)}\right). \]
+Thus, $M=(a(a^2-c^2)+b(a+c)(a+b-c):b(a^2-c^2):2aS_a+b^2c)$. We wish to show $K=(s-b:s-a:0),L=(s-c:0:s-a)$, and $M$ are collinear. This happens iff
+\[ \begin{vmatrix}
+	a(a^2-c^2)+b(a+c)(a+b-c)&b(a^2-c^2)&2aS_a+b^2c\\
+	s-c&0&s-a\\
+	s-b&s-a&0
+\end{vmatrix} = 0. \]
+This happens iff $(s-c)(s-a)(2aS_a+b^2c)=(s-a)((s-a)(a(a^2-c^2)+b(a+c)(a+b-c))-(s-b)b(a^2-c^2))$.
+\begin{align*}
+	(s-c)(s-a)(2aS_a+b^2c)&=(s-a)((s-a)(a(a^2-c^2)+b(a+c)(a+b-c))-(s-b)b(a^2-c^2))\\
+	(s-c)(2aS_a+b^2c)&=(s-a)(a(a^2-c^2)+2b(a+c)(s-c))-(s-b)b(a^2-c^2)\\
+	(s-c)(2aS_a+b^2c)&=-(a^2-c^2)(a-b)(s-c)+2b(a+c)(s-c)(s-a)\\
+	2aS_a+b^2c&=(a+c)(b^2+ca-a^2)\\
+	a(-a^2+b^2+c^2)+b^2c&=ab^2-a^3+cb^2+c^2a.
+\end{align*}
+Since these two quantities are equal, this proves the result. $\blacksquare$
+	
+\end{document}
