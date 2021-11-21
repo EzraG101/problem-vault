@@ -1,0 +1,39 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2004 G4}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2004 G4}
+
+\begin{statement}{2004 G4}
+	In a convex quadrilateral $ABCD$,
+	the diagonal $BD$ bisects neither the angle $ABC$ nor the angle $CDA$.
+	The point $P$ lies inside $ABCD$ and satisfies
+	\[\angle PBC=\angle DBA \quad\text{and}\quad \angle PDC=\angle BDA. \]
+	Prove that $ABCD$ is a cyclic quadrilateral
+	if and only if $AP=CP$.
+\end{statement}
+\bary PBD Note that $A$ and $C$ are isogonal conjugates with respect to $\triangle PBD$. Thus, let $A=(x_0,y_0,z_0)$. Then, $C=(a^2/x_0,b^2/y_0,c^2/z_0)$. Let $T:=a^2y_0z_0+b^2z_0x_0+c^2x_0y_0$. The circle $(ABD)$ is given by
+\[ -a^2yz-b^2zx-c^2xy+T(x+y+z)x/x_0=0. \]
+Therefore, $C$ lies on this circle iff 
+\[ -\frac{a^2b^2c^2}{y_0z_0}-\frac{a^2b^2c^2}{z_0x_0}-\frac{a^2b^2c^2}{x_0y_0}+T\left(\frac{a^2}{x_0}+\frac{b^2}{y_0}+\frac{c^2}{z_0}\right)a^2/x_0^2=0. \]
+Simplifying, this is equivalent to $T^2=(x_0bc)^2$. Now, note that $C=(a^2y_0z_0/T,b^2z_0x_0/T,c^2x_0y_0/T)$. Thus,
+\[ \ray{PA}=(x_0-1,y_0,z_0)\qquad\text{ and }\qquad\ray{PC}=\frac1T(a^2y_0z_0-T:b^2z_0x_0:c^2x_0y_0). \]
+Then, 
+\[ \abs{\ray{PA}}^2=-T+b^2z_0+c^2y_0=\frac{T(y_0+z_0)-a^2y_0z_0}{x_0} \]
+and
+\[ \abs{\ray{PC}}^2=\frac{-a^2b^2c^2x_0y_0z_0}{T^2}+\frac{b^2c^2x_0y_0+b^2c^2+z_0x_0}T=\frac{(bcx_0)^2}{T^2}\left(\frac{T(y_0+z_0)-a^2y_0z_0}{x_0}\right). \]
+Thus, $AP=CP$ iff $T^2=(bcx_0)^2$. Hence, we can conclude that $ABCD$ is cyclic if and only if $AP=CP$. $\blacksquare$
+	
+\end{document}
