@@ -1,0 +1,36 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2010 C2}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2010 C2}
+
+\begin{statement}{2010 C2}
+	Let $n \ge 4$ be an integer.
+	A \emph{flag} is a binary string of length $n$.
+	We say that a set of $n$ flags is \emph{diverse} if these flags
+	can be the rows of an $n \times n$ binary matrix
+	with the entries in its main diagonal all equal.
+	Determine the smallest positive integer $M$
+	such that among any $M$ distinct flags,
+	there exist $n$ flags forming a diverse set.
+\end{statement}
+We claim the answer is $M=2^{n-2}+1$. First, we show that if $M>2^{n-2}$. For this, consider the $2^{n-2}$ flags for which the first digit is $0$ and the second digit is $1$. Since $n\ge4, M\ge n$. Now, we will prove that if a set of $M$ flags does not have a diverse subset, then $M\le 2^{n-2}$, which will finish the proof. Indeed, by Hall's lemma, since we cannot place all $0$'s in the main diagonal, there must be a set of $a<n$ digits for which all but at most $a-1$ strings have all $1$'s in these positions. Call these strings \emph{big}. Similarly, there must be a set of $b<n$ digits for which all but at most $b-1$ strings have all $0$'s in these positions. Call such strings \emph{small}. \\
+If the two sets of digits had overlap, then no string can be both big and small, as that would imply having a digit that is both $0$ and $1$. Thus, the number of strings $M$ satisfies
+\[M\le (a-1)+(b-1)\le 2n-4\le 2^{n-2}. \]
+Otherwise, if both sets of digits don't overlap, there are at most $2^{n-(a+b)}$ strings that are both big and small (fix the $a+b$ positions we know are $0$ or $1$). Thus, 
+\[ M\le (a-1)+(b-1)+2^{n-(a+b)}=(a+b-2)+2^{n-2-(a+b-2)}\le 2^{n-2}. \]
+In any case, we obtain the desired inequality. $\blacksquare$
+	
+\end{document}
