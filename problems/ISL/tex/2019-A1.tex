@@ -1,0 +1,27 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2019 A1}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2019 A1}
+
+\begin{statement}{2019 A1}
+	Solve over $\ZZ$ the functional equation
+	$f(2a) + 2f(b) = f(f(a+b))$.
+\end{statement}
+We claim the only solutions are $f(x)=2x+c$ for any integer $c$, which clearly work. Setting $(a,b)=(0,n)$ and $(1,n-1)$ we obtain
+\[ f(0)+2f(n)=f(f(n))=f(2)+2f(n-1), \]
+so $f(n)-f(n-1)=\frac{f(2)-f(0)}2$. Since the right hand side is a constant and $f\colon\ZZ\rightarrow\ZZ$, it follows that $f(x)=mx+c$. Then, substituting in the original equation we find $m=2$ and $c$ can be anything. $\blacksquare$
+	
+\end{document}
