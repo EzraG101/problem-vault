@@ -1,0 +1,29 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2010 A1}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2010 A1}
+
+\begin{statement}{2010 A1}
+	Find all functions $f \colon \RR \to \RR$
+	such that for all $x,y \in \RR$,
+	\[ f(\left\lfloor x\right\rfloor y)
+	= f(x)\left\lfloor f(y)\right\rfloor. \]
+\end{statement}
+We claim the only solutions are $f(x)\equiv0$ and $f(x)=c$ for any $c\in[1,2)$, which clearly work. Setting $x=y=0$ gives $f(0)=f(0)\floor{f(0)}$, so $f(0)=0$ or $\floor{f(0)}=1$. In the second case, setting $y=0$ we find $f(0)=f(x)$ for all $x$, so $f$ is constant. This constant is in $[1,2)$ since $\floor{f(0)}=1$. In the first case, suppose there exists $u$ such that $\floor{f(u)}\ne0$. Then, $(x,y)=(0.5,u)$ gives
+\[ 0=f(0.5)\floor{f(u)}, \]
+so $f(0.5)=0$. Then, $(x,y)=(2,0.5)$ gives $f(1)=0$. Finally, $x=1$ gives $f(y)=0$ for all $y$, contradicting the existence of $u$. Thus, $\floor{f(x)}=0$ for all $x$. But then, setting $x=1$ in the original gives $f(y)=0$ for all $y$, concluding the proof. $\blacksquare$
+	
+\end{document}
