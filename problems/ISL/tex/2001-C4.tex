@@ -1,0 +1,24 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2001 C4}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2001 C4}
+
+\begin{statement}{2001 C4}
+	A set of three nonnegative integers $\{x,y,z\}$ with $x < y < z$ is called historic if $\{z-y,y-x\} = \{1776,2001\}$. Show that the set of all nonnegative integers can be written as the union of pairwise disjoint historic sets.
+\end{statement}
+We use the following greedy algorithm: In each step we take the least nonnegative integer $x$ that has not been selected and add the set $\{x,x+1776,x+1776+2001\}$ if it's available and $\{x,x+2001,x+1776,x+1776+2001\}$ otherwise. Also, when choosing a historic set, we color the least number \textcolor{red}{red}, the greatest \textcolor{blue}{blue} and the middle one \textcolor{green}{green}. It suffices to show that if in a step we pick $x$, then $x+1776+2001$ and one of $x+1776,x+2001$ have not been colored. Clearly they are not colored \textcolor{red}{red}, since they are greater than $x$. If $x+1776+2001$ is \textcolor{green}{green}, then one of $x+1776,x+2001$ must be \textcolor{red}{red}. If it is \textcolor{blue}{blue}, then $x$ would have already been chosen. In conclusion, $x+1776+2001$ is not colored. Now, if $x+2001$ were \textcolor{green}{green}, $x+225$ would be \textcolor{red}{red}, but this is not possible. Hence, if $x+2001$ is colored, it is \textcolor{blue}{blue}. Then, $x-1776$ is \textcolor{red}{red} and $x$ is \textcolor{green}{verde}, but $x$ was not colored. Therefore, we can always choose $x+2001$. Thus the algorithm never fails and $\NN$ is partitioned. $\blacksquare$
+	
+\end{document}
