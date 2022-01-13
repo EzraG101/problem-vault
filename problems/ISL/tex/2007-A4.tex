@@ -1,0 +1,38 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2007 A4}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2007 A4}
+
+\begin{statement}{2007 A4}
+	Find all functions $f: \mathbb{R}^{ + }\to\mathbb{R}^{ + }$ satisfying $f\left(x + f\left(y\right)\right) = f\left(x + y\right) + f\left(y\right)$ for all pairs of positive reals $x$ and $y$. Here, $\mathbb{R}^{ + }$ denotes the set of all positive reals.
+\end{statement}
+We claim the only solution is $f\equiv 2x$, which we easily check works. Now, we show it is the only one. Note that if $y>f(y)$ for some $y$, then we may substitute $x=y-f(y)$ to obtain
+\[ f(y)=f(2y-f(y))+f(y), \]
+but since $f(2y-f(y))>0$, this is a contradiction. Hence, $y\le f(y)$. Furthermore, if $y=f(y)$ then $f(x+y)=f(x+y)+f(y)$, contradicting again so $y<f(y)$. Thus, define $g\colon\RR^+\to\RR^+$ as
+\[ g(x):=f(x)-x \]
+The given equation becomes
+\[ g(x+y+g(y))=g(x+y)+y \]
+Now, for $a>b$ positive reals, plugging in $x=\frac{a-b}2$ and $y=\frac{a+b}2+g(b)$ we get
+\begin{align*}
+	g\left(a+g(b)+g\left(\frac{a+b}2+g(b)\right)\right)&=g(a+g(b))+\frac{a+b}2+g(b)\\
+	g\left(a+b+g(b)+g\left(\frac{a+b}2\right)\right)&=g(a)+b+\frac{a+b}2+g(b)\\
+	g\left(a+b+g\left(\frac{a+b}2\right)\right)+b&=g(a)+b+\frac{a+b}2+g(b)\\
+	g(a+b)+\frac{a+b}2+b&=g(a)+b+\frac{a+b}2+g(b)\\
+	g(a+b)&=g(a)+g(b).
+\end{align*}
+Thus, $g$ is Cauchy. Since $g$ is also bounded from below, it follows $g(x)=kx$ for some $k>0$, which upon substituting in the functional equation yields $k=1$. This implies $f$ must be $2x$ as desired. $\blacksquare$
+	
+\end{document}
