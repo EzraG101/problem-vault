@@ -1,0 +1,28 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2016 G5}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2016 G5}
+
+\begin{statement}{2016 G5}
+	Let $D$ be the foot of perpendicular from $A$ to the Euler line (the line passing through the circumcentre and the orthocentre) of an acute scalene triangle $ABC$. A circle $\omega$ with centre $S$ passes through $A$ and $D$, and it intersects sides $AB$ and $AC$ at $X$ and $Y$ respectively. Let $P$ be the foot of altitude from $A$ to $BC$, and let $M$ be the midpoint of $BC$. Prove that the circumcenter of triangle $XSY$ is equidistant from $P$ and $M$.
+\end{statement}
+Let $L,N,Q,R$ be the midpoint of $\seg{AC},\seg{AB}$ and the feet of the heights from $B$ and $C$ respectively. Let $K$ be the center of $(ADRHO)$ and $T$ be the center of $(ADNOL)$. Note that
+\[ \triangle RKQ \stackrel+\sim \triangle NTL \stackrel+\sim \triangle XYS, \]
+as they are all isosceles and have vertex angle $2\angle A$. Furthermore, we note $R-N-X$, $Q-L-Y$ and since they all lie on the perpendicular bisector of $\seg{AD}$, $K-T-S$. Thus, if we let $O_1, O_2, O_3$ be the centers of $\triangle RKQ$, $\triangle NTL$ and $\triangle XSY$, by the gliding principle, since
+\[ RKQO_1 \stackrel+\sim NTLO_2 \stackrel+\sim XYSO_3 \]
+it follows that $O_1-O_2-O_3$. However, note that $O_1$ is the nine-point center and $O_2$ lies on the perpendicular bisector of $\seg{NL}$. Since $NLMP$ is an isosceles trapezoid, it follows both $O_1$ and $O_2$ lie on the perpendicular bisector of $\seg{PM}$, so $O_3$ does as well as required. $\blacksquare$ 
+	
+\end{document}
