@@ -1,0 +1,24 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2017 C1}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2017 C1}
+
+\begin{statement}{2017 C1}
+	A rectangle $\mathcal{R}$ with odd integer side lengths is divided into small rectangles with integer side lengths. Prove that there is at least one among the small rectangles whose distances from the four sides of $\mathcal{R}$ are either all odd or all even.
+\end{statement}
+Divide $\SR$ into unit squares and color them green and purple in the usual checkerboard style, with green being on all $4$ corners. It's easy to see that there is exactly one more green square than purple squares. Now, note that by the checkerboard coloring if any rectangle has more green squares than purple squares, its distances from the four sides of $\SR$ must all have the same parity. Since these rectangles tile $\SR$, and $\SR$ has more green squares than purple squares, it follows such a rectangle must exist. This concludes the proof. $\blacksquare$
+	
+\end{document}

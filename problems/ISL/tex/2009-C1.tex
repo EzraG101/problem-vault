@@ -1,0 +1,38 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2009 C1}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2009 C1}
+
+\begin{statement}{2009 C1}
+	Consider $2009$ cards, each having one gold side and one black side,
+	lying on parallel on a long table.
+	Initially all cards show their gold sides.
+	Two players, standing by the same long side of the table,
+	play a game with alternating moves.
+	Each move consists of choosing a block of $50$ consecutive cards,
+	the leftmost of which is showing gold, and
+	turning them all over,
+	so those which showed gold now show black and vice versa.
+	The last player who can make a legal move wins.
+	
+	\begin{enumerate}[label=(\alph*)]
+		\item Does the game necessarily end?
+		\item Does there exist a winning strategy for the starting player?
+	\end{enumerate}
+\end{statement}
+We claim the game must end and that the starting player loses regardless of how the game is being played. Label the cards $1,2,\ldots 2009$ sequentially from left to right. Then, assign card $i$ a $1$ if it is gold and a $0$ otherwise. Concatenating the resulting number, we obtain a binary string, which is easily seen to be strictly decreasing after each move. Since it is always nonnegative, the game must eventually end. Now, consider cards $10, 60, \ldots, 1960$. For the game to have ended, these $40$ cards must be black. Also, note that every move affects exactly one of them. Thus, the number of black cards among these changes parity each move. Since there must be $40$ black cards when the game ends and we start with $0$, an even number of moves must have transpired, so the starting player loses. $\blacksquare$
+	
+\end{document}

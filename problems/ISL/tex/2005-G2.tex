@@ -1,0 +1,25 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2005 G2}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2005 G2}
+
+\begin{statement}{2005 G2}
+	Six points are  chosen on the sides of an equilateral triangle $ABC$: $A_1$, $A_2$ on $BC$, $B_1$, $B_2$ on $CA$ and $C_1$, $C_2$ on $AB$, such that they are the vertices of a convex hexagon $A_1A_2B_1B_2C_1C_2$ with equal side lengths. \\\\
+	Prove that the lines $A_1B_2$, $B_1C_2$ and $C_1A_2$ are concurrent.
+\end{statement}
+Let $P$ be the point inside the hexagon such that $\triangle A_1PA_2$ is equilateral. Then, since $\seg{PA_2}\parallel\seg{B_1B_2}$ and $PA_2=B_1B_2$, it follows $PB_2B_1A_2$ is a rhombus. analogously, $PC_1C_2A_1$ is a rhombus. Thus, $P$ is equidistant to $A_1,A_2,B_2,C_1$, so $A_1A_2B_2C_1$ is cyclic. Since $A_1A_2=B_2C_1$, it is an isosceles trapezoid. Note that $B_1$ and $C_2$ lie on the perpendicular bisector of $\seg{A_2B_2}$ and $\seg{A_1C_1}$. Since the diagonals $\seg{A_2C_1}$,$\seg{A_1B_2}$ of the isosceles trapezoid meet at a point on this perpendicular bisector, it follows the three diagonals of the hexagon concur. $\blacksquare$
+	
+\end{document}

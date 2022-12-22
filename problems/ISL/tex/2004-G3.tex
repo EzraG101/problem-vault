@@ -1,0 +1,25 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2004 G3}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2004 G3}
+
+\begin{statement}{2004 G3}
+	Let $O$ be the circumcenter of an acute-angled triangle $ABC$ with ${\angle B<\angle C}$. The line $AO$ meets the side $BC$ at $D$. The circumcenters of the triangles $ABD$ and $ACD$ are $E$ and $F$, respectively. Extend the sides $BA$ and $CA$ beyond $A$, and choose on the respective extensions points $G$ and $H$ such that ${AG=AC}$ and ${AH=AB}$. Prove that the quadrilateral $EFGH$ is a rectangle if and only if ${\angle ACB-\angle ABC=60^{\circ }}$.
+\end{statement}
+Let $\rho$ denote the reflection over the exterior angle bisector of $\angle A$. Then, $\rho(C)=G$ and $\rho(B)=H$. Now, since $\seg{AD}$ passes through the circumcenter of $\triangle ABC$ and it is well known that the circumcenter and orthocenter are isogonal conjugates, we find $\seg{AD}\perp\seg{GH}$. Now, note that $\angle C-\angle B = 60\dg$ if and only if $\angle ADC=30\dg$. This occurs if and only if $\triangle AFC$ and $\triangle AEB$ are equilateral. From centers and isosceles triangles, these triangles are equilateral if and only if $AG=AF$ and $AH=AE$.\\
+Now, this implies $\angle AFG = \angle FAD$, ie $\seg{FG}\parallel\seg{AD}$. Analogously, we would have $\seg{EH}\perp\seg{GH}\perp\seg{FG}$. Since $FE=GH$ from SAS on $\triangle AGH$ and $\triangle AFE$, this implies $EFGH$ is an isosceles trapezoid with right angles, ie, a rectangle. On the other hand, if $EFGH$ is a rectangle, then $\angle FGA = 90\dg-\angle C$ and $\seg{FG}\parallel\seg{AD}$. But then $\angle AFG=\angle FAD = 90\dg-\angle C$, so $AG=AF$. $\blacksquare$
+	
+\end{document}

@@ -1,0 +1,28 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2005 G5}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2005 G5}
+
+\begin{statement}{2005 G5}
+	Let $\triangle ABC$ be an acute-angled triangle with $AB \not= AC$. Let $H$ be the orthocenter of triangle $ABC$, and let $M$ be the midpoint of the side $BC$. Let $D$ be a point on the side $AB$ and $E$ a point on the side $AC$ such that $AE=AD$ and the points $D$, $H$, $E$ are on the same line. Prove that the line $HM$ is perpendicular to the common chord of the circumscribed circles of triangle $\triangle ABC$ and triangle $\triangle ADE$.
+\end{statement}
+Let $K=(ABC)\cap(ADE)$. It suffices to show $K$ lies on $(AH)$. Note that $K$ is the center of a spiral similarity taking $\seg{BD}$ to $\seg{CE}$. Let $X,Y$ be the feet of the height from $B$ and $C$ to $\seg{CA}$ and $\seg{AB}$, respectively. Since we want $K$ to lie on $(AXY)$, it suffices to show the aforementioned spiral similarity maps $Y$ to $X$. Note that
+\[ \angle YHD = 90\dg-\angle HDA = \frac12\angle A=\frac12\angle YHB. \]
+Thus, $\seg{YH}$ bisects $\angle YHB$. Analogously, $\seg{XH}$ bisects $\angle CHX$. Therefore, by the angle bisector theorem,
+\[ \frac{YD}{DB}=\frac{HY}{HB}=\sin(90\dg-\angle A)=\frac{HX}{HC}=\frac{XE}{EC}, \]
+so $Y$ maps to $X$ as desired. $\blacksquare$
+	
+\end{document}

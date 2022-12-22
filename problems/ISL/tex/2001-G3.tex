@@ -1,0 +1,39 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2001 G3}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2001 G3}
+
+\begin{statement}{2001 G3}
+	Let $ABC$ be a triangle with centroid $G$. Determine, with proof, the position of the point $P$ in the plane of $ABC$ such that $AP{\cdot}AG + BP{\cdot}BG + CP{\cdot}CG$ is a minimum, and express this minimum value in terms of the side lengths of $ABC$.
+\end{statement}
+We claim the position of the point $P$ such that the expression is minimal si when $P=G$. At this value, it is easy to see that
+\[ AP{\cdot}AG + BP{\cdot}BG + CP{\cdot}CG = AG^2+BG^2+CG^2=\frac13(a^2+b^2+c^2). \]
+Note that we have
+\begin{align*}
+	AP\cdot AG&\ge AP\cdot AG\cdot\cos{\angle PAG}\\
+	&=\vec{AP}\bullet\vec{AG}\\
+	&=(\vec P-\vec A)\bullet(\vec G-\vec A)\\
+	&= \vec P\bullet(\vec G-\vec A)+R^2-\vec A\bullet \vec G,
+\end{align*}
+where $R$ is the circumradius of $\triangle ABC$ and equality when $P$ is on ray $\ray{AG}$. Observe that
+\[ \vec A\bullet \vec G = \frac13(R^2+\vec A\bullet \vec B+\vec A \bullet \vec C) = R^2-\frac{b^2+c^2}6. \]
+Hence,
+\[ AP\cdot AG\ge \vec P\bullet(\vec G-\vec A)+\frac{b^2+c^2}6.  \]
+Adding the similar inequalities for $B$ and $C$,
+\[ AP\cdot AG + BP\cdot BG + CP\cdot CG \ge \frac13(a^2+b^2+c^2), \]
+with equality when $P$ lies on $\ray{AG},\ray{BG},\ray{CG}$, that is, when $P=G$. $\blacksquare$
+	
+\end{document}

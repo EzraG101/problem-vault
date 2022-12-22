@@ -1,0 +1,35 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2002 A3}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2002 A3}
+
+\begin{statement}{2002 A3}
+	Let $P$ be a cubic polynomial given by $P(x)=ax^3+bx^2+cx+d$, where $a,b,c,d$ are integers and $a\ne0$. Suppose that $xP(x)=yP(y)$ for infinitely many pairs $x,y$ of integers with $x\ne y$. Prove that the equation $P(x)=0$ has an integer root.
+\end{statement}
+Assume for the sake of contradiction that $P(x)=0$ has no integer roots. Now, let $(m,n)$ be such that $mP(m)=nP(n)$. Subtracting and using $m\ne n$, we see
+\[ a(m+n)(m^2+n^2)+b(m^2+n(m+n))+c(m+n)+d=0. \]
+Let $s:=m+n$. Then, 
+\[ as(2m^2-2ms+s^2)+b(m^2-ms+s^2)+cs+d=0, \]
+giving
+\[ (2as+b)m^2-s(2as+b)m+P(s)=0. \]
+Now, if $2as+b=0$, then $P(s)=0$, contradicting there are no integer roots. Hence, assume $2as+b\ne0$. By the quadratic formula,
+\[ m=\frac{s\pm\sqrt{s^2-\frac{4P(S)}{2as+b}}}{2}. \]
+Since $m$ is an integer, this implies $2as+b\mid 4P(s)\mid 8a^2P(s)$. Then,
+\[ \frac{8a^3s^3+8a^2bs^2+8a^2cs+8a^2d}{2as+b}=4a^2s^2+2abs+4ca-b^2+\frac{8a^2d-4abc+b^3}{2as+b}. \]
+If $8a^2d-4abc+b^3\ne0$, then $s$ can only take on finitely many values. Since given $s$ there are only two possible values of $x$, giving two values of $y$, this would contradict having infinitely many pairs which work. Thus, $8a^2d-4abc+b^3=0$. This implies that
+\[ 2s^2+\frac{2c+bs}a-\frac{b^2}{2a^2}\in\ZZ. \]
+	
+\end{document}

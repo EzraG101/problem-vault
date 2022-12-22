@@ -1,0 +1,33 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2000 C1}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2000 C1}
+
+\begin{statement}{2000 C1}
+	A magician has one hundred cards numbered 1 to 100. He puts them into three boxes, a red one, a white one and a blue one, so that each box contains at least one card. A member of the audience draws two cards from two different boxes and announces the sum of numbers on those cards. Given this information, the magician locates the box from which no card has been drawn. \\\\
+	How many ways are there to put the cards in the three boxes so that the trick works?
+\end{statement}
+We claim the answer is $12$. It is sufficient to count the number of partitions of $S:=\{1,2,\ldots,100\}$ into $3$ sets $A,B,C$ such that $A+B,B+C,C+A$ are pairwise disjoint. Indeed, the answer will be the number of such partitions times $3!=6$. We will prove that the only two such partitions are $\{1\},\{2,\ldots,99\},\{100\}$ and $\{1,4,\ldots,100\},\{2,5,\ldots,98\},\{3,6,\ldots,99\}$. To do so, we invoke the following famous lemma:
+\begin{lemma}{Cardinality of Sum}
+	For sets of numbers $A,B$, we have
+	\[ |A+B|\ge|A|+|B|-1 \]
+	with equality iff one of $A,B$ has cardinality $1$ or $A$ and $B$ are arithmetic progressions with the same common difference.
+\end{lemma}
+Now, notice that $|A+B|+|B+C|+|C+A|\le197$ since the sets are pairwise disjoint and their elements are between $3$ and $199$. However,
+\[ |A+B|+|B+C|+|C+A|\ge2(|A|+|B|+|C|)-3=197. \]
+Hence, we have equality in all inequalities. Clearly, not all of $A,B,C$ are singletons. If two of them are, WLOG $A$ and $B$, then $A=\{a\}$ and $B=\{b\}$, WLOG $a<b$. If $a>1$, then since $(b-(a-1))+a=b+1$ and the trick fails. Hence, $a=1$. Similarly, we conclude $b=100$. This is the first partition. Now, if only one of them is a singleton, WLOG $A=\{a\}$, then $B$ and $C$ are arithmetic progressions with the same common difference. We can easily see the difference is at most $3$. If it were $3$, then $B$ and $C$ consist of members of the same residue class mod $3$, so there is an entire residue class mod $3$ that is missed (except for possibly $a$). Hence, this is not possible. If the common difference is $2$, then WLOG $B$ consists of even numbers and $C$ of odd numbers. Since they are arithmetic progressions, this forces $a\in\{1,100\}$. In the first case, $1+4=2+3$ and in the latter, $100+1=2+99$, so the trick does not work. Hence, the common difference is $1$. If $a=1$, then $B=\{2,\ldots,k\},C=\{k+1,\ldots,100\}$ but $1+100=2+99$. If $a=100$, then $B=\{1,\ldots,k\},C=\{k+1,\ldots,99\}$ but $100+1=2+99$. Otherwise, WLOG $B=\{1,\ldots,a-1\},C=\{a+1,\ldots,100\}$, but $a+(a+1)=(a-1)+(a+2)$. Hence, there are no partitions in this case. Finally, if none of $A,B,C$ are singletons, $A,B,C$ are the residue classes mod $3$. That is, WLOG $A=\{1,4,\ldots,100\},B=\{2,5,\ldots,98\},C=\{3,6,\ldots,99\}$. These clearly work, so we have our second partition. Hence, we only have two of the desired partitions and the answer is $2\cdot3!=12$. $\blacksquare$
+	
+\end{document}

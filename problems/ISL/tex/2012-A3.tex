@@ -1,0 +1,31 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2012 A3}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2012 A3}
+
+\begin{statement}{2012 A3}
+	Let $a_2$, $a_3$, \dots, $a_n$ be positive reals with product $1$,
+	where $n \ge 3$.
+	Show that
+	\[ (1+a_2)^2 (1+a_3)^3 \dots (1+a_n)^n > n^n. \]
+\end{statement}
+By AM-GM we have $\underbrace{\frac1{k-1}+\ldots+\frac1{k-1}}_{k-1\text{ times}}+a_k\ge k\cdot\left(\dfrac{a_k}{(k-1)^{k-1}}\right)^{1/k}$, so 
+\[ (1+a_k)^k \ge \frac{a_k\cdot k^k }{(k-1)^{k-1}}. \]
+Multiplying over all values of $k$, 
+\[ (1+a_2)^2(1+a_3)^3\cdots(1+a_n)^n \ge \frac{a_2\cdot 2^2 }{(1)^{1}}\cdot\frac{a_3\cdot 3^3 }{(2)^{2}}\cdots\frac{a_n\cdot n^n }{(n-1)^{n-1}} = 1\cdot n^n/1^1 = n^n. \]
+Now we show the inequality is strict. If we had equality in the last inequality, then we must have equality in all our AM-GM inequalities, so $a_k = \frac1{k-1}$ for all $k$. However, since $n\ge3$, their product would not be $1$, proving the inequality is strict as desired. $\blacksquare$
+	
+\end{document}

@@ -1,0 +1,39 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2005 A2}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2005 A2}
+
+\begin{statement}{2005 A2}
+	We denote by $\mathbb{R}^+$ the set of all positive real numbers. \\\\
+	Find all functions $f: \mathbb R^ + \rightarrow\mathbb R^ +$ which have the property:
+	\[ f(x)f(y)=2f(x+yf(x)) \]
+	for all positive real numbers $x$ and $y$.
+\end{statement}
+We claim the only solution is $f\equiv2$, which clearly works. Now, we will prove by induction that $f(x)\ge 2^{(2^k-1)/2^k}$ for all non-negative integers $k$. Our base case is $k=0$, or $f(x)\ge0$. Indeed, suppose there exists $t\in\RR^+$ such that $f(t)<1$. Then, substituting $(x,y)=\left(t,\frac t{1-f(t)}\right)$ gives
+\[ f(t)f\left(\frac t{1-f(t)}\right)=2f\left(\frac t{1-f(t)}\right), \]
+so $1>f(t)=2$. This is a contradiction, so $f(x)\ge1$ for all $x$. For our inductive step, suppose there exists $t$ for which $f(t)<2^{(2^{k+1}-1)/2^{k+1}}$. Then, setting $(x,y)=(t,t)$ we get
+\[ 2^{(2^{k+1}-1)/2^k}>f(t)^2=2f(t+tf(t)), \]
+so $f(t+tf(t))<2^{(2^k-1)/2^k}$, contradicting the inductive hypothesis. This concludes the induction. Taking $k\to\infty$, we see $f(x)\ge2$ for all $x$. Now,
+\[ 2f(x)\le f(x)f\left(\frac r{f(x))}\right)=2f(x+r), \]
+so it follows $f$ is non-decreasing. But then,
+\[ f(x)f(y)\ge2f(2y). \]
+Thus, if there exists a $u$ such that $f(u)=2$, the above inequality gives
+\[ 2f(y)\ge 2f(2y)\ge 2f(y), \]
+so $f(y)=f(2y)$ for all $y$. This along the non-decreasing condition suffices to show $f$ is constant, so $f\equiv 2$. Otherwise, $f(x)>2$ for all $x$. Hence, we can improve to $f$ being strictly increasing, and thus injective. Now, substituting $(x,y)=\left(a,\frac a{f(a)}\right)$ and $(x,y)=\left(\frac a{f(a)},a\right)$ and using injectivity we find
+\[ 2a=\frac a{f(a)}+af\left(\frac a{f(a)}\right)>2a, \]
+which is a contradiction. Hence, the only solution is $f\equiv 2$. $\blacksquare$
+	
+\end{document}

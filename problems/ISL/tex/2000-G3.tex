@@ -1,0 +1,37 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2000 G3}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2000 G3}
+
+\begin{statement}{2000 G3}
+	Let $O$ be the circumcenter and $H$ the orthocenter of an acute triangle $ABC$.  Show that there exist points $D$, $E$, and $F$ on sides $BC$, $CA$, and $AB$ respectively such that
+	\[ OD + DH = OE + EH = OF + FH \]
+	and the lines $AD$, $BE$, and $CF$ are concurrent.
+\end{statement}
+Let $P$ be the reflection of $H$ over $\seg{BC}$ and $D=\seg{BC}\cap\seg{OP}$. Define $E,F$ similarly. We claim $D,E,F$ satisfy the required conditions. Indeed, 
+\[ OD + DH = OD + DP = OP = R, \]
+and analogously for $E$ and $F$, so the length condition is met. Also, note that $\angle PHD = \angle DPH = \angle PAO$, so $\seg{HD}\parallel\seg{AO}$. Hence, if $D'=\seg{AO}\cap\seg{BC}$ we find
+\[ \angle OD'D = \angle HDB = \angle BDP = \angle D'DO, \]
+so $O$ lies on the perpendicular bisector of $\seg{DD'}$. This implies $\seg{AD}$ and $\seg{AO}$ are isotomic conjugates. Therefore, $\seg{AD},\seg{BE},\seg{CF}$ concur at the isotomic conjugate of $O$. $\blacksquare$\\
+\\
+\textbf{Remark}: This solution is inspired by the following lemma:
+\begin{lemma}{Isogonal Conjugates give tangent Ellipse}
+	Let $P$ and $Q$ be isogonal conjugates wrt $\triangle ABC$. Then, there exists an ellipse with foci $P$ and $Q$ that is tangent to all three sides of $\triangle ABC$.
+\end{lemma}
+Considering the tangency points of the ellipse when $(P,Q)=(H,O)$ it suffices to show the three cevians concur, which follows after some angle chasing.\\
+Indeed, using this gives a second solution:\\
+Let $D,E,F$ be the points of tangency of the ellipse with foci $H,O$ that is tangent to the sides of $\triangle ABC$, which exists by the above lemma. By degenerate Brianchon on $AECDBF$, lines $\seg{AD},\seg{BE},\seg{CF}$ concur. $\blacksquare$	
+\end{document}

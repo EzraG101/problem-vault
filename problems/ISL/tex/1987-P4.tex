@@ -1,0 +1,61 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{IMO 1987/4}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{IMO 1987/4}
+
+\begin{statement}{IMO 1987/4}
+	Prove that there is no function 
+	$\func f{\ZZ_{\ge0}}{\ZZ_{\ge0}}$ satisfying 
+	$f(f(n))=n+1987$ for every $n\in\ZZ_{\ge0}$. 
+\end{statement}
+Indeed, we prove the statement replacing $1987$ by any odd 
+positive integer $M$. First, note that if $f(a)=f(b)$, then 
+$a+M=f(f(a))=f(f(b))=b+M$, so $a=b$. Hence, $f$ is 
+injective. Furthermore, evidently every integer at least $M$ 
+has a pre-image (take $f(a-M)$). Now, suppose $b<M$ has 
+a pre-image. Then, there exists $c$ such that $f(c)=b$. Now, if 
+$c$ had a pre-image, then there exists $d$ such that $f(d)=c$. 
+Hence, $d+M=f(f(d))=f(c)=b$. But $d+M\ge M$ and 
+$b<M$ which is impossible. Hence, $c$ does not have a 
+pre-image. It also follows $c<M$. Thus, at most $\frac{M-1}2$ 
+integers less than $M$ have a pre-image, implying at least 
+$\frac{M+1}2$ do not have one.\\
+Now, consider the directed graph with vertices corresponding to 
+$\ZZ_{\ge0}$ and edges pointing from $a$ to $f(a)$. Suppose it 
+has a cycle of length $k$. Then, going around the cycle twice, 
+$a=f^{(2k)}=a+k\cdot M$. It follows the graph has no cycles. 
+Since $f$ is injective, every vertex has in-degree at most $1$. 
+It follows the graph is a union of chains. Note that every chain 
+must "start" at some vertex of in-degree $1$, since else we have 
+some infinite sequence of non-negative integers $a_0,a_1,\ldots$ 
+such that $a_0=f^{(k)}(a_k)$. This implies $a_{2k}=a_0-k\cdot 
+M$, which directly contradicts that every $a_i$ is non-negative. 
+Hence, the graph is a union of chains that have a vertex of 
+in-degree $0$. Because of the previous discussion, these 
+vertices must correspond to a number less than $M$. Hence, there 
+are at least $\frac{M+1}2$ such chains (and at most $M$). Now, 
+if the first vertex in a chain is $k$, it follows every 
+non-negative integer that is $k\pmod M$ is in the chain (and is 
+an even distance away from $k$). Now, consider $f(k)$. Since it 
+is a distance $1$ from $k$, it is not $k\pmod M$. Suppose it is 
+$r\pmod M$. Then, $r$ cannot be in any other chain, since that 
+would imply $f(k)$ is in that other chain. Hence, $f(k)=r$. 
+Thus, the chains give a pairing of non-negative integers less 
+than $M$. However, there are $M$ of these. Since $M$ is odd, we 
+cannot pair them up, so this is impossible. Hence, such a 
+function $f$ does not exist. $\blacksquare$
+	
+\end{document}

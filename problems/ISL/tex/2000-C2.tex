@@ -1,0 +1,24 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2000 C2}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2000 C2}
+
+\begin{statement}{2000 C2}
+	A staircase-brick with 3 steps of width 2 is made of 12 unit cubes. Determine all integers $n$ for which it is possible to build a cube of side $n$ using such bricks.
+\end{statement}
+We claim the answer is all positive multiples of $12$. Evidently, if $n$ is an integer that works, we have $12\mid n^3$, so $6\mid n$. Hence, $n=6k$. Now, note that we may place two staircase-bricks together to form a $2\times3\times4$ prism. Since $2,3,4\mid12$, it readily follows that the cube can be built when $k$ is even. Now we prove the cube cannot be built if $k$ is odd. Suppose it can and consider a tiling of a $6k\times6k\times6k$ cube with staircase-bricks. We separate the brick into six $6\times6$ layers. In each layer, the staircase-brick fills either a $2\times1,2\times2$, or $2\times3$. If the staircase-brick fills a $2\times2$, then it must fill a $2\times1$ and $2\times3$ in the above and below layers. Hence, the bottom-most layer has no $2\times2$ filled by staircase-bricks. It follows the layer right on top is filled only by $2\times2$. It is straightforward to see that the only way to tile a $6k\times6k$ layer using $2\times2$ pieces is to lay out the pieces in a $3k\times3k$ grid. Therefore, we use $9k^2$ pieces. Now, look at the bottom layer. It is filled by $x$ $2\times3$ and $y$ $2\times1$. Since it is the bottom layer, these must be part of one of the $9k^2$ pieces above. Hence, $x+y=9k^2$. On the other hand, summing areas we see $6x+2y=36k^2$, or $3x+y=18k^2$. Thus, $2x=9k^2$. However, $k$ is odd, so this is impossible. Hence, the cube cannot be built when $k$ is odd as desired. $\blacksquare$
+	
+\end{document}

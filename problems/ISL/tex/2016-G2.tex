@@ -1,0 +1,26 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2016 G2}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2016 G2}
+
+\begin{statement}{2016 G2}
+	Let $ABC$ be a triangle with circumcircle $\Gamma$ and incenter $I$ and let $M$ be the midpoint of $\overline{BC}$. The points $D$, $E$, $F$ are selected on sides $\overline{BC}$, $\overline{CA}$, $\overline{AB}$ such that $\overline{ID} \perp \overline{BC}$, $\overline{IE}\perp \overline{AI}$, and $\overline{IF}\perp \overline{AI}$. Suppose that the circumcircle of $\triangle AEF$ intersects $\Gamma$ at a point $X$ other than $A$. Prove that lines $XD$ and $AM$ meet on $\Gamma$.
+\end{statement}
+We use directed angles mod $180\dg$. Let $D'$ be the reflection of $D$ over $M$. It is well known that $\seg{IM}\parallel\seg{AD'}$. Also, since $X$ is the spiral center of the spiral similarity sending $\seg{BC}$ to $\seg{FE}$, we see $\triangle XIM\stackrel+\sim\triangle XFB$. Let $T=\seg{XM}\cap\seg{AD'}$. Then,
+\[ \dang ATX = \dang IMX = \dang FBX = \dang ABX, \]
+so $T$ lies on $\Gamma$. Therefore, by the \emph{Butterfly Theorem} it follows that $\seg{AM}\cap\seg{XD}$ lies on $\Gamma$ as desired. $\blacksquare$
+	
+\end{document}

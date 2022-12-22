@@ -1,0 +1,32 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2001 G4}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2001 G4}
+
+\begin{statement}{2001 G4}
+	Let $M$ be a point in the interior of triangle $ABC$. Let $A'$ lie on $BC$ with $MA'$ perpendicular to $BC$. Define $B'$ on $CA$ and $C'$ on $AB$ similarly.  Define
+	\[ p(M) = \frac{MA' \cdot MB' \cdot MC'}{MA \cdot MB \cdot MC}. \]
+	Determine, with proof, the location of $M$ such that $p(M)$ is maximal.  Let $\mu(ABC)$ denote this maximum value.  For which triangles $ABC$ is the value of $\mu(ABC)$ maximal?
+\end{statement}
+We claim $p(M)$ is maximal when $M$ is the incenter of $\triangle ABC$ and that $\mu(ABC)$ is maximal when $\triangle ABC$ is equilateral. Note that
+\[ p(M)=\sqrt{\sin\angle BAM\sin\angle MAC}\cdot\sqrt{\sin\angle ACM\sin\angle MCB}\cdot\sqrt{\sin\angle CMB\sin\angle MBA}. \]
+Now, recall that on $(0,\pi)$, $\sin$ is both positive and concave. Therefore, by AM-GM and Jensen,
+\[ p(M)\le\sin\left(\frac{\angle A}2\right)\sin\left(\frac{\angle B}2\right)\sin\left(\frac{\angle C}2\right)=\mu(ABC). \]
+Equality is attained only when $\seg{AM},\seg{BM},\seg{CM}$ bisect the angles of the triangle, ie. when $M$ is the incenter. Finally, using AM-GM and Jensen again,
+\[ \mu(ABC)\le\left(\sin\frac\pi6\right)^3=\frac18. \]
+Equality is attained only when $\angle A=\angle B=\angle C$, ie. when $\triangle ABC$ is equilateral. $\blacksquare$
+	
+\end{document}

@@ -1,0 +1,31 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2003 G4}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2003 G4}
+
+\begin{statement}{2003 G4}
+	Let $\Gamma_1$, $\Gamma_2$, $\Gamma_3$, $\Gamma_4$ be distinct circles such that $\Gamma_1$, $\Gamma_3$ are externally tangent at $P$, and $\Gamma_2$, $\Gamma_4$ are externally tangent at the same point $P$. Suppose that $\Gamma_1$ and $\Gamma_2$; $\Gamma_2$ and $\Gamma_3$; $\Gamma_3$ and $\Gamma_4$; $\Gamma_4$ and $\Gamma_1$ meet at $A$, $B$, $C$, $D$, respectively, and that all these points are different from $P$. Prove that
+	\[ \frac{AB\cdot BC}{AD\cdot DC}=\frac{PB^2}{PD^2}. \]
+\end{statement}
+Let $\gamma_1,\gamma_2,\gamma_3,\gamma_4,A',B',C',D'$ be the images of $\Gamma_1,\Gamma_2,\Gamma_3,\Gamma_4,A,B,C,D$ under an inversion with center $P$ and radius $1$. From the given conditions, we see the quadrilateral formed by lines $\gamma_1,\gamma_2,\gamma_3,\gamma_4$ is a parallelogram. Furthermore, this quadrilateral is $A'B'C'D'$. Therefore, $A'B'=D'C'$. From the inversion distance formula, this gives
+\[ \frac{AB}{PA\cdot PB}=\frac{DC}{PD\cdot PC}, \]
+or $\dfrac{AB}{DC}=\dfrac{PA}{PC}\cdot\dfrac{PB}{PD}$. Analogously, we obtain
+\[ \frac{BC}{AD}=\frac{PC}{PA}\cdot\frac{PB}{PD}. \]
+Multiplying these two equations,
+\[ \frac{AB\cdot BC}{AD\cdot DC}=\frac{PA}{PC}\cdot\frac{PB}{PD}\cdot\frac{PC}{PA}\cdot\frac{PB}{PD}=\frac{PB^2}{PD^2}, \]
+as desired. $\blacksquare$
+	
+\end{document}

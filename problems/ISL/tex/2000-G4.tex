@@ -1,0 +1,45 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2000 G4}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2000 G4}
+
+\begin{statement}{2000 G4}
+	Let $ A_1A_2 \ldots A_n$ be a convex polygon, $ n \geq 4.$ Prove that $ A_1A_2 \ldots A_n$ is cyclic if and only if to each vertex $ A_j$ one can assign a pair $ (b_j, c_j)$ of real numbers, $ j = 1, 2, \ldots, n,$ so that $ A_iA_j = b_jc_i - b_ic_j$ for all $ i, j$ with $ 1 \leq i < j \leq n$.
+\end{statement}
+\underline{Assignable implies Cyclic}:\\
+We have
+\begin{align*}
+	A_1A_2\cdot A_3A_k+A_1A_k\cdot A_2A_3&=(b_2c_1-b_1c_2)(b_kc_3-b_3c_k)+(b_kc_1-b_1c_k)(b_3c_2-b_2c_3)\\
+	&=c_1b_2c_3b_k-c_1b_2b_3c_k-b_1c_2c_3b_k+b_1c_2b_3c_k+c_1c_2b_3b_k-c_1b_2c_3b_k-b_1c_2b_3c_k+b_1b_2c_3c_k\\
+	&=c_1c_2b_3b_k+b_1b_2c_3c_k-c_1b_2b_3c_k-b_1c_2c_3b_k\\
+	&=b_3c_1(b_kc_2-b_2c_k)-b_1c_3(b_kc_2-b_2c_k)\\
+	&=(b_3c_1-b_1c_3)(b_kc_2-b_2c_k)\\
+	&=A_1A_3\cdot A_2A_k.
+\end{align*}
+Thus, by the converse of Ptolemy's theorem, $A_k$ lies on $(A_1A_2A_3)$ for all $k\ge4$. Hence, $A_1A_2\ldots A_n$ is cyclic.\\
+\underline{Cyclic implies Assignable}:\\
+Scale so that the circumcircle of $A_1A_2\ldots A_n$ has radius $1$. Then, we assign to $A_j$ the pair 
+\[(\sqrt2\sin(\angle A_1OA_j/2),\sqrt2\cos(\angle A_1OA_j/2)).\] Therefore,
+\begin{align*}
+	b_jc_i-b_ic_j&=(\sqrt2\sin(\angle A_1OA_j/2))(\sqrt2\cos(\angle A_1OA_i/2))-(\sqrt2\sin(\angle A_1OA_i/2))(\sqrt2\cos(\angle A_1OA_j/2))\\
+	&=2\sin(\angle A_1OA_j/2-\angle A_1OA_i/2)\\
+	&=2\sin(\angle A_iOA_j/2)\\
+	&=2\sin\angle A_iA_1A_j\\
+	&=A_iA_j,
+\end{align*}
+where the last step follows from the law of sines on $\triangle A_iA_1A_j$. Thus, this assignment of pairs works. $\blacksquare$
+	
+\end{document}

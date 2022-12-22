@@ -1,0 +1,29 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2017 G3}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2017 G3}
+
+\begin{statement}{2017 G3}
+	Let $O$ be the circumcenter of an acute triangle $ABC$. Line $OA$ intersects the altitudes of $ABC$ through $B$ and $C$ at $P$ and $Q$, respectively. The altitudes meet at $H$. Prove that the circumcenter of triangle $PQH$ lies on a median of triangle $ABC$.
+\end{statement}
+Let $T$ be the circumcenter of $\triangle PQH$. Also, denote by $E,F,M$ the feet of the altitudes from $B$ and $C$ and the midpoint of $\seg{BC}$, respectively. First, 
+\[ \angle PQH = \angle QAC + \angle ACQ = 90\dg-\angle B+90\dg-\angle A=\angle C. \]
+Therefore, $\angle THE = \angle THP = 90\dg-\angle C = \angle HAE$. Therefore, $\seg{TH}$ is tangent to $(AEF)$. Similarly,
+\[ \angle BPT = \angle HPT = 90\dg-\angle C = \angle BAP, \]
+so $\seg{TP}$ is tangent to $(ABP)$. Finally, note that 
+\[ \angle MBP = \angle CBE = 90\dg-\angle C = \angle BAP, \]
+so $\seg{MB}$ is tangent to $(ABP)$. Recall that $\seg{ME}$ is tangent to $(AEF)$. Then, since $TH^2=TP^2$ and $MB^2=ME^2$, both $T$ and $M$ lie on the radical axis of both circles. But $A$ lies on both circles, so this radical axis is the $A-$median, as desired. $\blacksquare$	
+\end{document}

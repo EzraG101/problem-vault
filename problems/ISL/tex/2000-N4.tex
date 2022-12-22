@@ -1,0 +1,25 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2000 N4}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2000 N4}
+
+\begin{statement}{2000 N4}
+	Find all triplets of positive integers $ (a,m,n)$ such that  $ a^m + 1 \mid (a + 1)^n$.
+\end{statement}
+We claim all such triples are $(1,m,n)$ for $m,n\in\ZZ^+$, $(a,1,n)$ for $a,n\in\ZZ^+$, and $(2,3,n)$ for $n\in\ZZ_{\ge2}$, which are all easily seen to work. Now, we see they are the only ones.\\
+If $a=1$ then it is clear all pairs $(m,n)$ work. Similarly, if $m=1$ it is clear all pairs $(a,n)$ work. Thus, assume $a,m>1$. Then, by Zsigmondy's theorem, we have either $a=2,m=3$ or $a^m+1$ has a primitive prime divisor $p$. But if $a^m+1\mid(a+1)^n$, then there cannot be such a primitive prime divisor giving a contradiction. Hence, $a=2,m=3$ from where $9\mid3^n$, so $n\ge2$. $\blacksquare$
+	
+\end{document}

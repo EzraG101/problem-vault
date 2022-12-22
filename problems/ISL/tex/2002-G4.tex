@@ -1,0 +1,28 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2002 G4}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2002 G4}
+
+\begin{statement}{2002 G4}
+	Circles $S_1$ and $S_2$ intersect at points $P$ and $Q$. Distinct points $A_1$ and $B_1$ (not at $P$ or $Q$) are selected on $S_1$. The lines $A_1P$ and $B_1P$ meet $S_2$ again at $A_2$ and $B_2$ respectively, and the lines $A_1B_1$ and $A_2B_2$ meet at $C$.  Prove that, as $A_1$ and $B_1$ vary, the circumcentres of triangles $A_1A_2C$ all lie on one fixed circle.
+\end{statement}
+We use directed angles mod $180\dg$. Note that $Q$ is the Miquel point of quadrilateral $A_1B_1B_2A_2$. Therefore, $CA_1QA_2$ is cyclic. Hence, the circumcenter of $\triangle A_1A_2C$ is the circumcenter of $\triangle A_1A_2Q$. Let $O$ be the circumcenter of this triangle and $O_1,O_2$ be the centers of $S_1,S_2$. We will show $O$ lies on $(O_1QO_2)$, which finishes the problem. Let $M$ and $N$ be the midpoints of $\seg{QA_1},\seg{QA_2}$ respectively. Note that
+\[ \dang QO_1A_1 = 2\dang QPA_1 = 2\dang QPA_2 = \dang QO_2A_2. \]
+This implies $\dang A_1QO_1 = \dang A_2QO_2$. Therefore,
+\[ \dang A_2QA_1 = \dang A_2QO_2+\dang O_2QO_1+\dang O_1QA_1 = \dang O_2QO_1. \]
+Now, since $QMON$ is cyclic we have $\dang A_2QA_1=\dang NQM=\dang NOM=\dang O_2OO_1$. Thus, since $\dang O_2OO_1=\dang O_2QO_1$, we have $O\in(O_1QO_2)$ as desired. $\blacksquare$
+	
+\end{document}

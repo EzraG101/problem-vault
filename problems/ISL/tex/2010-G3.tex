@@ -1,0 +1,31 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2010 G3}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2010 G3}
+
+\begin{statement}{2010 G3}
+	Let $A_1A_2 \ldots A_n$ be a convex polygon. Point $P$ inside this polygon is chosen so that its projections $P_1, \ldots , P_n$ onto lines $A_1A_2, \ldots , A_nA_1$ respectively lie on the sides of the polygon. Prove that for arbitrary points $X_1, \ldots , X_n$ on sides $A_1A_2, \ldots , A_nA_1$ respectively,
+	\[ \max \left\{ \frac{X_1X_2}{P_1P_2}, \ldots, \frac{X_nX_1}{P_nP_1} \right\} \geq 1. \]
+\end{statement}
+Let $\theta_j$ be the measure of the (counter-clockwise) angle $\angle X_{j-1}PX_j$, where we take $X_0=X_n$. If we had $\theta_j+\angle A_j<180\dg$ for all $j$, then adding over all of them would give
+\[ 360\dg+(n-2)180\dg<n180\dg, \]
+which is a clear contradiction. Hence, there exists some $j$ for which $\theta_j\ge180\dg-\angle A_j$. This implies that $P$ lies inside of the circumcircle of $\triangle X_{j-1}A_jX_j$. Therefore, if its diameter is $D$, we have $A_jP\le D$. Then, by the law of sines, we have
+\[ \frac{X_{j-1}X_j}{\sin\angle A_j}=D,\quad \frac{P_{j-1}P_j}{\sin\angle A_j}=A_jP, \]
+noting that $A_jP$ is the diameter of $(P_{j-1}A_jP_j)$. Hence,
+\[ \frac{X_{j-1}X_j}{P_{j-1}P_j}=\frac D{A_jP}\ge 1, \]
+implying the desired result. $\blacksquare$
+	
+\end{document}

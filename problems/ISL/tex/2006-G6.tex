@@ -1,0 +1,71 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2006 G6}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2006 G6}
+
+\begin{statement}{2006 G6}
+	Circles $\omega_1$ and $\omega_2$ with centers $O_1$ and 
+	$O_2$ are externally tangent at point $D$ and internally 
+	tangent to a circle $\omega$ at points $E$ and $F$ 
+	respectively. Line $t$ is the common tangent of $\omega_1$ 
+	and $\omega_2$ at $D$. Let $\seg{AB}$ be the diameter of 
+	$\omega$ perpendicular to $t$, so that $A, E, O_1$ are on 
+	the same side of $t$. Prove that lines $AO_1$, $BO_2$, $EF$ 
+	and $t$ are concurrent.
+\end{statement}
+Let $O$ be the center of $\omega$ and let $P$ be the 
+intersection of the $O-$median of $\triangle OO_1O_2$ and 
+$\seg{EF}$. We will show $P$ lies on the $4$ lines, which 
+implies they are concurrent. First, note that since 
+$O_1D=O_1E,O_2D=O_1F$, and $OE=OF$, circle $(DEF)$ is tangent to 
+all three sides of $\triangle OO_1O_2$. Since $D$ lies between 
+$O_1$ and $O_2$ and $E$ and $F$ lie outside of $\seg{OO_1}$ and 
+$\seg{OO_2}$ respectively, it follows $(DEF)$ is the 
+$O-$excircle of $\triangle OO_1O_2$. \\
+We now proceed with barycentric coordinates. \bary O{O_1}{O_2} 
+It follows that $D=(0:s-b:s-c),E=(-(s-c):s:0),F=(-(s-b):0:s)$, 
+where $s=\frac{a+b+c}2$. Hence, line $EF$ has equation
+\[ sx+(s-c)y+(s-b)z=0. \]
+Since $P$ lies on this line and on the $O-$median, it has 
+coordinates $(-a:s:s)$. Now, note that since $t$ is tangent to 
+both $\omega_1$ and $\omega_2$, we have $t\perp\seg{O_1O_2}$. 
+Since $t\perp\seg{AB}$ by construction, it follows 
+$\seg{AB}\parallel\seg{O_1O_2}$. Also, since $O\in\seg{AB}$, it 
+follows $A$ and $B$ have coordinates of the form $(1,t,-t)$. 
+Now, note that $\omega$ has radius $OE=s$. Hence, $OA^2=s^2$. By 
+the barycentric distance formula, since $\ray{OA}=(0,t,-t)$, we 
+see $s^2=a^2t^2$. Hence, $t=\pm\frac sa$. Indeed, $B$ satisfies 
+the same equation, so one solution corresponds to $A$ and the 
+other to $B$. Since $A$ lies on the same side of $t$ as $O_1$, 
+we have $A=\left(1,\frac sa,-\frac sa\right)=(a:s:-s)$. 
+Similarly, $B=(a:-s:s)$. Then, points on the cevian $O_1A$ are 
+given by $(a:k:-s)$ and points on the cevian $O_2B$ are given by 
+$(a:-s:k)$. It is easy to see $P=(a:-s:-s)$ is of these forms, 
+so $P$ lies on both lines. Finally, we must see $P\in t$. This 
+is equivalent to showing $\seg{PD}\perp\seg{O_1O_2}$. Since 
+$\ray{O_2O_1}=(0,1,-1)$ and $\ray{PD}=\left(\frac 
+a{b+c},\frac{s-b}a-\frac s{b+c},\frac{s-c}a-\frac 
+s{b+c}\right)$, from Evan's Favorite Forgotten Trick, it 
+suffices to show
+\[ a^2\left(\frac{s-c}a-\frac s{b+c}+\frac 
+s{b+c}-\frac{s-b}a\right)+b^2\left(-\frac 
+a{b+c}\right)+c^2\left(\frac a{b+c}\right)=0.\]
+Indeed, simplifying the left hand side we obtain
+\[ a(b-c)+a\cdot\frac{c^2-b^2}{b+c}=0 \]
+as desired. Thus, $P$ lies on $AO_1,BO_2,EF$, and $t$, so these 
+$4$ lines are concurrent. $\blacksquare$ 
+	
+\end{document}

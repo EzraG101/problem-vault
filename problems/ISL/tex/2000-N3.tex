@@ -1,0 +1,26 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2000 N3}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2000 N3}
+
+\begin{statement}{2000 N3}
+	Does there exist a positive integer $n$ such that $n$ has exactly 2000 prime divisors and $n$ divides $2^n + 1$?
+\end{statement}
+We show more generally that there exists a positive integer $n$ with exactly $k$ prime divisors such that $n\mid 2^n+1$. We proceed by induction on $k$. For our base case, note that $9\mid 513$. Now, assume for our inductive hypothesis that $n=9\dprod_{i=2}^k p_i\mid 2^n+1$ and $p_j\mid 2^{n/p_j\cdots p_k}+1$. By Zsigmondy, there exists a primitive prime divisor $p_{k+1}>2$ of $2^n+1$. If $p_{k+1}\in\{3,p_2,\ldots,p_k\}$, then it is not primitive, as it would divide $2^{n/p_k}+1$. Thus, $p_{k+1}\nmid n$. Now, we show $N=np_{k+1}\mid 2^N+1$. Indeed, since $n\perp p_{k+1}$ it suffices to show $n,p_{k+1}\mid 2^N+1$. We have
+\[ 2^N+1\equiv (2^n)^{p_{k+1}}+1\equiv (-1)^{p_{k+1}}+1\equiv 0\pmod{n,p_{k+1}}, \]
+so $N\mid 2^N+1$, as desired. $\blacksquare$
+	
+\end{document}

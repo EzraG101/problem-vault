@@ -1,0 +1,34 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2002 G2}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2002 G2}
+
+\begin{statement}{2002 G2}
+	Let $ABC$ be a triangle for which there exists an interior point $F$ such that $\angle AFB=\angle BFC=\angle CFA$. Let the lines $BF$ and $CF$ meet the sides $AC$ and $AB$ at $D$ and $E$ respectively. Prove that
+	\[ AB+AC\geq4DE. \]
+\end{statement}
+Let $X$ and $Y$ be points outside $\triangle ABC$ such that $\triangle ACY$ and $\triangle ABX$ are equilateral. It is easy to see that $B-D-F-Y$, $C-E-F-X$ and $(AFCY)$ and $(AFDX)$ cyclic. Then,
+\[ \frac{FY}{FD}=1+\frac{DY}{FD}=1+\frac{[AYD]}{[AFD]}=1+\frac{[AYC]}{[AFC]}\ge1+3=4. \]
+Analogously $FX\ge4FE$. Now, by the law of cosines,
+\begin{align*}
+	4DE&=4\sqrt{FD^2+FE^2+FD\cdot FE}\\
+	&\le\sqrt{FX^2+FY^2+FX\cdot FY}\\
+	&=XY\\
+	&\le AX+AY\\
+	&= AB+AC.\,\blacksquare
+\end{align*}
+	
+\end{document}

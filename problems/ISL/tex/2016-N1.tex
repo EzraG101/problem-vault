@@ -1,0 +1,32 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2016 N1}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2016 N1}
+
+\begin{statement}{2016 N1}
+	For any positive integer $k$, denote the sum of digits of $k$ in its decimal representation by $S(k)$. Find all polynomials $P(x)$ with integer coefficients such that for any positive integer $n \geq 2016$, the integer $P(n)$ is positive and
+	\[ S(P(n)) = P(S(n)). \]
+\end{statement}
+We claim the only solutions are $P(x)=1,2,\ldots,9$ and $P(x)=x$, which clearly work. We show they are the only ones.\\
+Let $P(x)=\sum a_ix^i$. Setting $x=10^k$ for $k\ge4$,
+\[ \sum a_i=P(1)=S(P(10^k))\le\sum S(a_i). \]
+This is clearly impossible unless the $a_i$ are digits. Now, setting $x=9\cdot 10^k$ for $k\ge 3$, 
+\[ \sum 9^ia_i=P(9)=S(P(9\cdot10^k))\le\sum S(9^ia_i). \]
+This is clearly impossible unless $a_i=0$ for all $i\ge2$ and $a_1\in\{0,1\}$. If $a_1=0$ it follows $a_0\in\{1,2,\ldots,9\}$. If $a_1=1$, then
+\[ S(n+a_0)=S(n)+a_0. \]
+Taking $n=2019$, it's easy to see $a_0=0$. This concludes the proof. $\blacksquare$
+	
+\end{document}

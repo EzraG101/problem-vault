@@ -1,0 +1,38 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2001 C1}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2001 C1}
+
+\begin{statement}{2001 C1}
+	Let $A = (a_1, a_2, \ldots, a_{2001})$ be a sequence of positive integers. Let $m$ be the number of 3-element subsequences $(a_i,a_j,a_k)$ with $1 \leq i < j < k \leq 2001$, such that $a_j = a_i + 1$ and $a_k = a_j + 1$.  Considering all such sequences $A$, find the greatest value of $m$.
+\end{statement}
+We claim the answer is $667^3$. Indeed, we prove that replacing $2001$ with $3x$, the answer is $x^3$.\\
+\\
+For both solutions, we present the construction:
+\[ A=(\underbrace{1,1,\ldots,1}_{x\,1's},\underbrace{2,2,\ldots,2}_{x\,2's},\underbrace{3,3,\ldots,3}_{x\,3's}) \]
+\emph{Solution 1 (Smart).} Let $a,b,c$ denote how many elements of $A$ are $0,1,2$ mod $3$ respectively. Note that $a+b+c=3x$. A subsequence counted by $m$ must contain exactly $1$ of each residue class, so there are at most $abc$ such subsequences. By AM-GM, $abc\le\left(\frac{a+b+c}3\right)^3=x^3$ as desired. $\blacksquare$\\
+\\
+\emph{Solution 2 (Dumb).} Suppose we have $A$ such that $m$ is maximal. Note that $A$ must be non-decreasing, since if $a_i>a_{i+1}$, then switching these two increases $m$. Furthermore, if $a_i<a_{i+1}$, then $a_{i+1}-a_i=1$, as otherwise we may increase $m$ by subtracting $1$ to $a_{i+1},\ldots,a_{3x}$. Hence, $A$ is of the form
+\[ (\underbrace{n,\ldots,n}_{s_0\,\text{times}},\underbrace{n+1,\ldots,n+1}_{s_1\,\text{times}},\ldots,\underbrace{n+r-1,\ldots,n+r-1}_{s_{r-1}\,\text{times}}) \]
+and $m=s_0s_1s_2+\ldots+s_{r-3}s_{r-2}s_{r-1}$. (Note that $r\ge3$, since otherwise $m=0$). Hence, we want to prove that if $s_0+s_1+\ldots+s_{r-1}=3x$, then $s_0s_1s_2+\ldots+s_{r-3}s_{r-2}s_{r-1}\le x^3$. we proceed by induction on $r$. If $r=3$ this is immediate by AM-GM as in solution $1$. If $r=4$, then
+\[ s_0s_1s_2+s_1s_2s_3=s_1s_2(s_0+s_3)\le x^3 \]
+where the inequality comes from $r=3$ with $s_1,s_2,s_0+s_3$. If $r=5$, then
+\[ s_0s_1s_2+s_1s_2s_3+s_2s_3s_4=s_1s_2(s_0+s_3)+s_2(s_0+s_3)s_4-s_2s_0s_4<s_2s_2(s_0+s_3)+s_2(s_0+s_3)s_4\le x^3 \]
+where the last inequality comes from $r=4$ with $s_1,s_2,s_0+s_3,s_4$. As our induction hypothesis, suppose the inequality holds for $r=k\ge5$. Then,
+\[ s_0s_1s_2+\ldots+s_{k-2}s_{k-1}s_k=s_1s_2(s_0+s_3)+s_2(s_0+s_3)s_4+(s_0+s_3)s_4s_5+\ldots+s_{k-2}s_{k-1}s_k-s_2s_0s_4-s_0s_4s_5\]\[<s_1s_2(s_0+s_3)+s_2(s_0+s_3)s_4+(s_0+s_3)s_4+s_5+\ldots+s_{k-2}s_{k-1}s_k\le x^3, \]
+where the last inequality comes from $r=k$ with $s_1,s_2,s_0+s_3,s_4,\ldots,s_k$. This concludes the induction. $\blacksquare$
+	
+\end{document}

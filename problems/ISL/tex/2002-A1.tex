@@ -1,0 +1,35 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2002 A1}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2002 A1}
+
+\begin{statement}{2002 A1}
+	Find all functions $f$ from the reals to the reals such that
+	\[ f\left(f(x)+y\right)=2x+f\left(f(y)-x\right) \]
+	for all real $x,y$.
+\end{statement}
+We claim the only solutions are $f(x)=x+c$ which are easily seen to work. Now, plugging in $y=-f(x)$ we see
+\[ f(0)-2x=f(f(-f(x))-x), \]
+implying $f$ is surjective. Now, suppose we have $f(a)=f(b)$ and let $u$ be such that $f(u)=a+b$. Then, setting $x=a,y=u$ and $x=b,y=u$ we get
+\begin{align*}
+	f(f(a)+u)&=2a+f(a+b-a)=2a+f(b)\\
+	f(f(b)+u)&=2b+f(a+b-b)=2b+f(a).
+\end{align*}
+Thus, $2a=2b$ so $a=b$ and $f$ is injective. Finally, setting $x=0$,
+\[ f(f(0)+y)=f(f(y))\implies f(y)=y+f(0), \]
+as desired. $\blacksquare$
+	
+\end{document}

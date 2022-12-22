@@ -1,0 +1,32 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2015 G4}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2015 G4}
+
+\begin{statement}{2015 G4}
+	Let $ABC$ be an acute triangle and let $M$ be the midpoint of $AC$. A circle $\omega$ passing through $B$ and $M$ meets the sides $AB$ and $BC$ at points $P$ and $Q$ respectively. Let $T$ be the point such that $BPTQ$ is a parallelogram. Suppose that $T$ lies on the circumcircle of $ABC$. Determine all possible values of $\frac{BT}{BM}$.
+\end{statement}
+We claim the only possibility is $\sqrt2$. We proceed with barycentric coordinates, with reference triangle $\triangle ABC$. Let $T=(u,v,w)$. It follows from parallel lines that $P=(u,1-u,0)$ and $Q=(0,1-w,w)$. Then, we compute the equation of circle $(BPQ)$ is
+\[ (BPQ)\to -a^2yz-b^2zx-c^2xy+(x+y+z)(c^2(1-u)x+a^2(1-w)z)=0. \]
+Since $M=(1:0:1)$ lies on this circle, it follows 
+\[ c^2+a^2-\frac{b^2}2=c^2u+a^2w. \]
+Since $T$ lies on $(ABC)$ we also have
+\[ -a^2vw-b^2wu-c^2uv=0. \]
+Finally, recall that $BM^2=\frac{c^2+a^2}2-\frac{b^2}4$. Then, from the barycentric distance formula
+\[ BT^2=-a^2(v-1)(w)-b^2wu-c^2(u)(v-1)=-a^2vw-b^2wu-c^2uv+a^2w+c^2u=0+c^2+a^2-\frac{b^2}2=2BM^2. \]
+The conclusion follows. $\blacksquare$
+	
+\end{document}

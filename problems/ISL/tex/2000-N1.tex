@@ -1,0 +1,27 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2000 N1}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2000 N1}
+
+\begin{statement}{2000 N1}
+	Determine all positive integers $ n\geq 2$ that satisfy the following condition: for all $ a$ and $ b$ relatively prime to $ n$ we have
+	\[ a \equiv b \pmod n\qquad\text{if and only if}\qquad ab\equiv 1 \pmod n. \]
+\end{statement}
+We claim the answer is $n\in\{2,3,4,6,8,12,24\}$. Let $n=2^k\cdot m$ where $k\ge0$ and $m$ is odd. Note that $m+2\perp n$. Therefore, if $n$ works, we must have
+\[ (m+2)^2\equiv1\pmod n.  \]
+Reducing mod $m$, this implies $m\mid 3$. Now, if $m=1$ it follows $n\mid8$. If $m=3$, then $n\mid 24$. Thus, $n$ is a divisor of $24$. Manually checking each of its divisors, we see the only $n$ satisfying the condition are those mentioned above. $\blacksquare$ 
+	
+\end{document}

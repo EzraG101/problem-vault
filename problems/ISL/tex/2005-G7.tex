@@ -1,0 +1,48 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2005 G7}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2005 G7}
+
+\begin{statement}{2005 G7}
+	In an acute triangle $ABC$, let $D$, $E$, $F$ be the feet of the perpendiculars from the points $A$, $B$, $C$ to the lines $BC$, $CA$, $AB$, respectively, and let $P$, $Q$, $R$ be the feet of the perpendiculars from the points $A$, $B$, $C$ to the lines $EF$, $FD$, $DE$, respectively. \\\\
+	Prove that $p\left(ABC\right)p\left(PQR\right) \ge \left(p\left(DEF\right)\right)^2$, where $p\left(T\right)$ denotes the perimeter of triangle $T$ .
+\end{statement}
+Assume without loss of generality that the circumradius of $\triangle ABC$ is $1$. We let $\angle A:=\angle BAC, a:=BC$ and analogously for $B$ and $C$. First, from the law of sines
+\[ p(ABC)=a+b+c=2(\sin\angle A+\sin\angle B+\sin\angle C). \]
+Now, using the law of sines on $\triangle BFD$ we see
+\[\frac{\sin\angle B}{FD}=\frac{\sin\angle C}{BD}=\frac{\sin\angle C}{c\cos\angle B}, \]
+so $FD=c\sin\angle B\cos\angle B/\sin\angle C=\sin2\angle B$. Analogously for the other two sides,
+\[ p(DEF)=\sin2\angle A + \sin2\angle B + \sin2\angle C. \]
+Now, note that $PE=AE\cos\angle B$ and $RE=EC\cos\angle B$. Thus, by the law of cosines on $\triangle PER$, 
+\begin{align*}
+	PR^2&=AE^2\cos^2\angle B+EC^2\cos^2\angle B+2AE\cdot EC\cos^2\angle B\cos2\angle B\\
+	&=\cos^2\angle B(AE^2+EC^2+2AE\cdot EC-4AE\cdot EC\sin^2\angle B)\\
+	&=\cos^2\angle B(b^2-4b\cos\angle A\sin\angle C\cdot b\sin\angle A\cos\angle C)\\
+	&=b^2\cos^2\angle B(1-\sin2\angle C\sin2\angle A),
+\end{align*}
+which, since $\angle B<90\dg$, gives $PR=b\cos\angle B\sqrt{1-\sin2\angle C\sin2\angle A}=\sin2\angle B\sqrt{1-\sin2\angle C\sin2\angle A}$. Therefore,
+\[ p(PQR)=\sum\sin2\angle A\sqrt{1-\sin2\angle B\sin2\angle C}. \]
+Now, since $\sin$ is positive and concave on $(0,\pi)$ we use AM-GM and Jensen to obtain
+\[ \sin2\angle B\sin2\angle C\le\left(\frac{\sin2\angle B+\sin2\angle C}2\right)^2\le\sin^2\angle A. \]
+This implies $\sqrt{1-\sin2\angle B\sin2\angle C}\ge\cos\angle A$. Finally, making use of the Cauchy-Schwarz inequality,
+\begin{align*}
+	p(ABC)p(PQR)&=\left(\sum2\sin\angle A\right)\left(\sum\sin2\angle A\sqrt{1-\sin2\angle B\sin2\angle C}\right)\\
+	&\ge\left(\sum2\sin\angle A\right)\left(\sum\cos\angle A\sin2\angle A\right)\\
+	&\ge\left(\sqrt{2\sin\angle A\cos\angle A\sin2\angle A}\right)^2\\
+	&=\left(\sum\sin2\angle A\right)^2=(p(DEF))^2.\,\blacksquare
+\end{align*}
+	
+\end{document}

@@ -1,0 +1,45 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{1997 SL4}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{1997 SL4}
+
+\begin{statement}{1997 SL4}
+	An $ n \times n$ matrix whose entries come from the set $ S = \{1, 2, \ldots , 2n - 1\}$ is called a \textit{silver matrix} if, for each $ i = 1, 2, \ldots , n$, the $ i$-th row and the $ i$-th column together contain all elements of $ S$. Show that:
+	\begin{enumerate}[label=(\alph*)]
+		\item there is no silver matrix for $ n = 1997$;
+		\item silver matrices exist for infinitely many values of $ n$.
+	\end{enumerate}
+\end{statement}
+Suppose we have an $n\times n$ ($n>1$) silver matrix $A$. Weight each element $a_{ij}$ of the matrix with a $w_{ij}=1$ if $i=j$ and $w_{ij}=2$ if $i\ne j$. From the definition of a silver matrix, 
+\[ C:=\sum_{a_ij=r}w_{ij} \]
+is the same for all $r\in S=\{1,2,\ldots,2n-1\}$. Note that $2n-1>n$, so that there is some element of $S$ that does not appear in the main diagonal. From this element, it follows $C$ is even, since $w_{ij}$ will always be $2$. Therefore, it follows that if any element of $S$ must show up an even number of times in the main diagonal. This is clearly impossible if $n$ is odd, which proves (a).\\
+Now, we provide an inductive proof that silver matrices always exist for $n$ a power of $2$, which will prove (b). We have the following construction for $n=2$:
+\[ \begin{bmatrix}
+	A&C\\
+	B&A
+\end{bmatrix}, \]
+where $\{A,B,C\}=\{1,2,3\}$. The crucial bit is that the main diagonal consists of the same element. For our inductive hypothesis, assume a silver matrix exists for $n=2^k$, with the main diagonal being the same element. Now, we construct a silver matrix for $n=2^{k+1}$ with the main diagonal being the same element, which will conclude the induction. Let $M_1$ be a $2^k\times 2^k$ silver matrix, but replace $S$ with
+\[S_1:=\{1,2,\ldots,2^k-1,2^{k+2}-2^k,\ldots,2^{k+2}-1\}.\]
+Similarly, let $M_2$ and $M_3$ be $2^k\times 2^k$ silver matrices, but replacing $S$ with
+\[ S_2:=\{2^k,\ldots,2^{k+2}-2^k-2\},S_3:=\{2^k+1,\ldots,2^{k+2}-2^k-1\} \]
+respectively. $M_2$ and $M_3$ will be identical, except for their main diagonal. While $M_2$ has its main diagonal all equal to $2^k$, $M_3$ has its main diagonal all equal to $2^{k+2}-2^k-1$. We claim
+\[ M := \begin{bmatrix}
+	M_1&M_2\\
+	M_3&M_1
+\end{bmatrix} \]
+is a silver matrix. Indeed, looking at the $i$th row and column, all elements of $S_1$ appear exactly once because of $M_1$, all elements of $S_2\cap S_3$ appear exactly once since $M_2$ and $M_3$ are identical except for the main diagonal, and $2^k,2^{k+2}-2^k-1$ appear exactly once because of the main diagonals of $M_2$ and $M_3$. Hence, $M$ is a silver matrix as desired. $\blacksquare$
+	
+\end{document}

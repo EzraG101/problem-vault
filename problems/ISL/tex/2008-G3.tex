@@ -1,0 +1,32 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2008 G3}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2008 G3}
+
+\begin{statement}{2008 G3}
+	Let $ ABCD$ be a convex quadrilateral and let $ P$ and $ Q$ be points in $ ABCD$ such that $ PQDA$ and $ QPBC$ are cyclic quadrilaterals. Suppose that there exists a point $ E$ on the line segment $ PQ$ such that $ \angle PAE = \angle QDE$ and $ \angle PBE = \angle QCE$. Show that the quadrilateral $ ABCD$ is cyclic.
+\end{statement}
+Let $W,X,Y,Z$ be the points on $\seg{AE},\seg{BE},\seg{CE},\seg{DE}$ respectively such that $W,Z$ lie on $(PQDA)$ and $X,Y$ lie on $(PQBC)$. From the angle condition it follows both $WQPZ$ and $XPQY$ are isosceles trapezoids. Now, let 
+\[ f(X)=\pm\frac{PX}{QX}, \]
+where $f(X)$ is negative if $X$ lies on or below the segment and positive otherwise. From the isosceles trapezoids, we see
+\[ f(W)f(Z)=f(X)f(Y)=1. \]
+Now, by the \emph{Ratio Lemma} we have that
+\[ f(A)f(W)=f(B)f(X)=f(C)f(Y)=f(D)f(Z)=f(E). \]
+Therefore,
+\[ f(A)f(D)=f(A)f(W)f(D)f(Z)=f(E)^2=f(B)f(X)f(C)f(Y)=f(B)f(C). \]
+But by the ratio lemma once more this implies $\seg{AD},\seg{BC},\seg{PQ}$ concur, hence $ABCD$ is cyclic as desired. $\blacksquare$
+	
+\end{document}

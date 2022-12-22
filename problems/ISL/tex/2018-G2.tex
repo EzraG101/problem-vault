@@ -1,0 +1,28 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2018 G2}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2018 G2}
+
+\begin{statement}{2018 G2}
+	Let $ABC$ be a triangle with $AB=AC$, and let $M$ be the midpoint of $BC$. Let $P$ be a point such that $PB<PC$ and $PA$ is parallel to $BC$. Let $X$ and $Y$ be points on the lines $PB$ and $PC$, respectively, so that $B$ lies on the segment $PX$, $C$ lies on the segment $PY$, and $\angle PXM=\angle PYM$. Prove that the quadrilateral $APXY$ is cyclic.
+\end{statement}
+Let $X'$ and $Y'$ be points on $\seg{PX}$ and $\seg{PY}$ respectively such that $BX=XX'$ and $CY=YY'$. Then, from the midpoints,
+\[ \angle BX'C = \angle PXM = \angle PYM = \angle BY'C, \]
+so $BX'Y'C$ is cyclic. Let $O$ be its center. Then, $\seg{OX}\perp\seg{XX'}$ and $\seg{OY}\perp\seg{YY'}$ giving that $(PXY)$ is the circle with diameter $\seg{OP}$. It suffices to show that $A$ is on this circle. However, note that $A-M-O$, so
+\[ \angle PAO = \angle PAM = 90\dg, \]
+as desired. $\blacksquare$
+	
+\end{document}

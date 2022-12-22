@@ -1,0 +1,28 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2001 N5}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2001 N5}
+
+\begin{statement}{2001 N5}
+	Let $a > b > c > d$ be positive integers and suppose that
+	\[ ac + bd = (b+d+a-c)(b+d-a+c). \]
+	Prove that $ab + cd$ is not prime.
+\end{statement}
+The given equation rearranges to $a^2+c^2-ac=b^2+d^2+bd$. From the Law of Cosines it follows there is a quadrilateral $PQRS$ with $PQ=a,QR=d,RS=b,SP=c$ and $\angle P=60\dg,\angle R=120\dg$. Therefore, this quadrilateral is cyclic. From the extended Ptolemy's theorem (Ptolomeo en Esteroides) we have
+\[ a^2+c^2-ac=QS^2=\frac{(ab+cd)(ad+bc)}{ac+bd}. \]
+Now, since $a>b>c>d$ the rearrangement inequality gives $ab+cd>ac+bd>ad+bc$. Now, if $ab+cd$ is prime, it follows $ac+bd\perp ac+bd$, so $ac+bd\mid ad+bc$. But $ac+bd>ad+bc$ so this is impossible. Hence, $ab+cd$ is not prime. $\blacksquare$ 
+	
+\end{document}

@@ -1,0 +1,41 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2013 N1}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2013 N1}
+
+\begin{statement}{2013 N1}
+	Let $\mathbb{Z} _{>0}$ be the set of positive integers. Find all functions  $f: \mathbb{Z} _{>0}\rightarrow \mathbb{Z} _{>0}$ such that
+	\[ m^2 + f(n) \mid mf(m) +n \]
+	for all positive integers $m$ and $n$.
+\end{statement}
+We claim the only solution is $f(n)=n$ for all $n$, which is easily seen to work. Now, plugging in $m=n=2$ we obtain
+\[ 4+f(2)\mid 2f(2)+2. \]
+Since $4+f(2)\mid 8+2f(2)$, it follows $4+f(2)\mid 6$. But $4+f(2)\ge5$, so $4+f(2)=6$, implying $f(2)=2$. Now, substituting $m=2$ gives
+\begin{align*}
+	4+f(n)\mid 4+n\\
+	\implies 4+f(n)&\le4+n\\
+	f(n)\le n
+\end{align*}
+for all $n$. It is clear $f(1)\ge1$. For all $m>1$, we see
+\begin{align*}
+	m^2+f(m)\mid mf(m)+m\\
+	\implies m^2+f(m)&\le mf(m)+m\\
+	m(m-1)&\le f(m)(m-1)\\
+	m\le f(m).
+\end{align*}
+Thus, for all $n\in\ZZ_{>0}$, $n\le f(n)\le n$, so $f(n)=n$ for all $n$ as desired. $\blacksquare$
+	
+\end{document}

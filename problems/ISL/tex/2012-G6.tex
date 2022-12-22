@@ -1,0 +1,28 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2012 G6}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2012 G6}
+
+\begin{statement}{2012 G6}
+	Let $ABC$ be a triangle with circumcenter $O$ and incenter $I$. The points $D,E$ and $F$ on the sides $BC,CA$ and $AB$ respectively are such that $BD+BF=CA$ and $CD+CE=AB$. The circumcircles of the triangles $BFD$ and $CDE$ intersect at $P \neq D$. Prove that $OP=OI$.
+\end{statement}
+We use directed angles mod $180\dg$. Let $V$ be the reflection of $I$ over $O$ and $T_A,T_B,T_C$ be the extouch points. Furthermore, let $X=(BT_CT_A)\cap(BFD)$ and $Y=(CT_BT_A)\cap(CED)$. First, note that by the incenter-excenter lemma and homothety, $V$ is the circumcenter of the ex-triangle, also known as the \emph{Bevan point}. It follows by this homothety that $\seg{VT_A}\perp\seg{BC}$ and analogously for the others. Thus, $V$ is the Miquel point of $\triangle T_AT_BT_C$ with respect to $\triangle ABC$. Now, note that
+\[ \dang VYP = \dang VYC + \dang CYP = 90\dg+\dang CDP=90\dg+\dang BDP = \dang VXB + \dang BXP = \dang VXP, \]
+so $XVYP$ is cyclic. By spiral similarity construction, we see $X$ is the center of a spiral similarity taking $\seg{DT_A}$ to $\seg{FT_C}$. However, since $BT_A+BT_C=AC=BD+DF$, it follows
+\[ DT_A=FT_C. \]
+Hence, $\triangle XDT_A\cong\triangle XFT_C$. Thus, $XD=XF$, and $X$ is the midpoint of arc $\widehat{DF}$. Hence, $B-I-X$. Since $\seg{BX}\perp\seg{XV}$, it follows $X$ lies on the circle with diameter $\seg{IV}$. Analogously, $Y$ lies on this circle. Therefore, $P$ lies on this circle and because $O$ is its center, $OP=OI$. $\blacksquare$
+	
+\end{document}

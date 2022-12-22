@@ -1,0 +1,38 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2000 N2}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2000 N2}
+
+\begin{statement}{2000 N2}
+	For a positive integer $n$, let $d(n)$ be the number of all positive divisors of $n$. Find all positive integers $n$ such that $d(n)^3=4n$.
+\end{statement}
+We claim the only such $n$ are $2,128$, and $2000$, which are easily seen to work. Now, from $4n=d(n)^3$ it follows there is some integer $m$ for which $n=2m^3$. Then, $d(2m^3)^3=8m^3$, so
+\[ d(2m^3)=2m. \]
+Now, let $m=2^\alpha\cdot x$, with $x$ odd. Further, let $p_1,p_2,\ldots$ be primes and $e_1,e_2,\ldots$ non-negative integers such that $x=\prod p_i^{e_i}$. Then,
+\begin{align*}
+	d(2^{3\alpha+1}\cdot x^3)&=2^{\alpha+1}\cdot x\\
+	(3\alpha+2)\prod(3e_i+1)&=2^{\alpha+1}\prod p_i^{e_i}.
+\end{align*}
+Now, notice that the left hand side is not divisible by $3$. Hence, $p_i>3$ for all $i$. It follows $p_i^{e_i}\ge(3e_i+1)$ for all $i$, with equality iff $e_i=0$. Also, for $\alpha\ge2$, we have $2^{\alpha+1}\ge(3\alpha+2)$, with equality iff $\alpha=2$. We separate into cases:
+\begin{enumerate}
+	\item If $\alpha=0$, then $\prod(3e_i+1)=\prod p_i^{e_i}$. By the aforementioned inequality this gives $e_i=0$ for all $i$, so $x=1\implies m=1\implies \boxed{n=2}$.
+	\item If $\alpha=1$ then $5\prod(3e_i+1)=4\prod p_i^{e_i}$. Thus, $5\in\{p_1,\ldots\}$. Now, note that if the exponent of $5$ is at least $2$, $4\cdot 5^e>5\cdot(3e+1)$ and due to the previous inequality both sides will never be equal. Hence, the exponent of $5$ is $1$. But then, $\prod_{p_i\ne 5}(3e_i+1)=\prod_{p_i\ne 5}p_i^{e_i}$, so $e_i=0$. Hence, $x=5\implies m=10\implies \boxed{n=2000}$.
+	\item Finally, if $\alpha\ge2$ then $2^{\alpha+1}\ge(3\alpha+2)$ and $p_i^{e_i}\ge(3e_i+1)$. Hence, 
+	\[ 2^{\alpha+1}\prod p_i^{e_i}\ge(3\alpha+2)\prod(3e_i+1)=2^{\alpha+1}\prod p_i^{e_i}.  \]
+	Since equality holds it follows $\alpha=2$ and $e_i=0$ for all $i$, so $x=1\implies m=4\implies \boxed{n=128}$. $\blacksquare$
+\end{enumerate}
+	
+\end{document}

@@ -1,0 +1,28 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2002 G3}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2002 G3}
+
+\begin{statement}{2002 G3}
+	The circle $S$ has center $O$, and $BC$ is a diameter of $S$. Let $A$ be a point of $S$ such that $\angle AOB<120\dg$.  Let $D$ be the midpoint of the arc $AB$ which does not contain $C$. The line through $O$ parallel to $DA$ meets the line $AC$ at $I$. The perpendicular bisector of $OA$ meets $S$ at $E$ and at $F$. Prove that $I$ is the incenter of the triangle $CEF$.
+\end{statement}
+Let $I'$ be the incenter of $\triangle CEF$. We will show that $\seg{OI'}\parallel\seg{AD}$ and $I'\in\seg{AC}$, which implies the result. First, note that $A$ and $D$ are on the same arc $\widehat{EF}$ from the $\angle AOB < 120\dg$ condition. Then, as $\triangle EAO$ and $\triangle FAO$ are equilateral, 
+\[\angle EDF = \frac12(360\dg-120\dg)=120\dg. \]
+Also, $\angle EI'F=90\dg+\frac12\angle C=90\dg+30\dg=120\dg$. Now, note that
+\[\angle I'ED = \angle I'EF + \angle FED = \frac14\angle FOC + 30\dg + \frac14\angle AOB = 30\dg-\frac14\angle AOB + 30\dg + \frac14\angle AOB=60\dg. \]
+This implies that $I'EDF$ is a parallelogram. Hence, the midpoint of $\seg{DI'}$ coincides with that of $\seg{EF}$, which coincides with that of $\seg{AO}$, implying that $DAI'O$ is a parallelogram. This gives $\seg{OI'}\parallel\seg{AD}$. Finally, since $A$ is the midpoint of $\widehat{EF}$, $I'$ lies on $\seg{AC}$, so $I'=I$ as desired. $\blacksquare$
+	
+\end{document}

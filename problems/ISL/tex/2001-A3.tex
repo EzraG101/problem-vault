@@ -1,0 +1,39 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2001 A3}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2001 A3}
+
+\begin{statement}{2001 A3}
+	Let $x_1,x_2,\ldots,x_n$ be arbitrary real numbers. Prove the inequality
+	\[
+	\frac{x_1}{1+x_1^2} + \frac{x_2}{1+x_1^2 + x_2^2} + \cdots +
+	\frac{x_n}{1 + x_1^2 + \cdots + x_n^2} < \sqrt{n}.
+	\]
+\end{statement}
+We proceed by induction on $n$. Our base case $n=1$ is dealt with AM-GM: ($x_1=0$ is clear)
+\[ \frac{x_1}{1+x_1^2}\le\frac{x_1}{2\abs{x_1}}\le\frac12<\sqrt1. \]
+Now, for our inductive step note that we may assume the $x_i$ are positive, since changing them to positive increases the LHS and if one of them is $0$ we are done by the inductive hypothesis. Now, if
+\[ \frac{x_n}{1+x_1^2+\ldots+x_n^2}\le\sqrt n-\sqrt{n-1}, \]
+we finish by the inductive hypothesis. Thus, assume the opposite inequality holds. Then,
+\[ (\sqrt n-\sqrt{n-1})x_n^2-x_n+(\sqrt n-\sqrt{n-1})(1+\ldots+x_{n-1}^2)<0. \]
+This can happen only if the discriminant of the quadratic in $x_n$ is positive, so this implies
+\[ 4(2n-1-2\sqrt{n^2-n})(1+\ldots+x_{n-1}^2)<1. \]
+But then, using the inductive hypothesis
+\[ \sqrt{n-1}>\sum\frac{x_i}{1+\ldots+x_i^2}>\sum\frac{x_i}{1+\ldots+x_{n-1}^2}>4(2n-1-2\sqrt{n^2-n})\sum x_i. \]
+
+***[FAKESOLVE ALERT :( ]***
+	
+\end{document}

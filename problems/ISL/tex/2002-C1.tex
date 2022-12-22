@@ -1,0 +1,24 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2002 C1}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2002 C1}
+
+\begin{statement}{2002 C1}
+	Let $n$ be a positive integer. Each point $(x,y)$ in the plane, where $x$ and $y$ are non-negative integers with $x+y<n$, is coloured red or blue, subject to the following condition: if a point $(x,y)$ is red, then so are all points $(x',y')$ with $x'\leq x$ and $y'\leq y$. Let $A$ be the number of ways to choose $n$ blue points with distinct $x$-coordinates, and let $B$ be the number of ways to choose $n$ blue points with distinct $y$-coordinates. Prove that $A=B$.
+\end{statement}
+Let $x_0,\ldots,x_{n-1}$ be the number of blue points with $x-$coordinate $0,\ldots,n-1$ respectively. Define $y_0,\ldots,y_{n-1}$ similarly. Then, $A=\prod x_i$ and $B=\prod y_i$. We will prove that $(x_0,\ldots,x_{n-1})$ is a permutation of $(y_0,\ldots,y_{n-1})$, which clearly implies $A=B$. We proceed by induction. Our base case $n=1$ is evident, as $x_0=y_0$. Now, suppose that for $n=k$ we have that $(x_0,\ldots,x_{k-1})$ is a permutation of $(y_0,\ldots,y_{k-1})$. Now, for $n=k+1$, consider the points on the diagonal $x+y=k$. Let $x_0',\ldots,x_k',y_0',\ldots,y_k'$ be as defined before but when these points are deleted. By our induction hypothesis we know $(x_0',\ldots,x_k')$ is a permutation of $(y_0',\ldots,y_k')$. Now, if point $(j,k-j)$ is blue, we know $x_j'=x_j-1$ and $y_{k-j}'=y_{k-j}-1$. If instead it is red, then $x_j'=x_j=y_{k-j}'=y_{k-j}=0$. Hence, if we take the sequences $(x_0,\ldots,x_k)$ and $(y_0,\ldots,y_k)$, delete the zeros and subtract $1$ from each term, we obtain the sequences $(x_0',\ldots,x_k')$ and $(y_0',\ldots,y_k')$ except for the same amount of zeros removed from each one. Hence, these two are still permutations of one another. Thus, the original sequences are permutations of one another once we add back the zeros. This concludes the induction. $\blacksquare$
+	
+\end{document}

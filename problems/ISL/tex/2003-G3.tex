@@ -1,0 +1,33 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2003 G3}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2003 G3}
+
+\begin{statement}{2003 G3}
+	Let $ABC$ be a triangle and let $P$ be a point in its interior.  Denote by $D$, $E$, $F$ the feet of the perpendiculars from $P$ to the lines $BC$, $CA$, $AB$, respectively.  Suppose that
+	\[ AP^2 + PD^2 = BP^2 + PE^2 = CP^2 + PF^2. \]
+	Denote by $I_A$, $I_B$, $I_C$ the excenters of the triangle $ABC$.  Prove that $P$ is the circumcenter of the triangle $I_AI_BI_C$.
+\end{statement}
+We have
+\begin{align*}
+AP^2 + PD^2 &= BP^2 + PE^2 \\
+AP^2 - PE^2 &= BP^2 - PD^2 \\
+AE^2 &= BD^2 \\
+AE &= BD.
+\end{align*}
+Analogously, $BF = CE$ and $CD = AF$. It follows that $D,E,F$ are the extouch points. Hence, $P$ is the concurrency point of the perpendiculars to the sides through the extouch points. Now, consider a homothety with center $I$ and ratio $2$. This sends $O$ to $V$, the \emph{Bevan Point}. Since it also sends the midpoints of arcs $\widehat{BC},\widehat{CA},\widehat{AB}$ to the excenters, $V$ is the circumcenter of $\triangle I_AI_BI_C$. By the homothety, $\seg{I_AV}\perp\seg{BC}$ and analogously with the other sides, so $V$ is the concurrency point of the perpendiculars to the sides through the extouch points. Hence, $P=V$ as desired. $\blacksquare$
+	
+\end{document}

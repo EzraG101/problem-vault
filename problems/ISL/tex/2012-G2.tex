@@ -1,0 +1,26 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2012 G2}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2012 G2}
+
+\begin{statement}{2012 G2}
+	Let $ABCD$ be a cyclic quadrilateral whose diagonals $AC$ and $BD$ meet at $E$. The extensions of the sides $AD$ and $BC$ beyond $A$ and $B$ meet at $F$. Let $G$ be the point such that $ECGD$ is a parallelogram, and let $H$ be the image of $E$ under reflection in $AD$. Prove that $D,H,F,G$ are concyclic.
+\end{statement}
+We use directed angles mod $180\dg$. Let $D',F',G',H'$ be images of $D,F,G,H$ under a homothety with center $E$ and ratio $\frac12$. Since $ECGD$ is a parallelogram, $G'$ is the midpoint of $\seg{CD}$. Thus, we want to show $G'$ lies on the nine-point circle of $\triangle DEF$. Let $M$ be the midpoint of $\seg{DF}$. Then, $(MD'F')$ is said nine-point circle. We have
+\[ \dang MG'D' = \dang(\seg{BC},\seg{EC}) = \dang BCA = \dang BDA = \dang D'DM = \dang MF'D',  \]
+so $G'$ lies on the circle as desired. $\blacksquare$
+	
+\end{document}

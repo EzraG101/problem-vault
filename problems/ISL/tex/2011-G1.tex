@@ -1,0 +1,32 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2011 G1}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2011 G1}
+
+\begin{statement}{2011 G1}
+	Let $ABC$ be an acute triangle. Let $\omega$ be a circle whose centre $L$ lies on the side $BC$. Suppose that $\omega$ is tangent to $AB$ at $B'$ and $AC$ at $C'$. Suppose also that the circumcentre $O$ of triangle $ABC$ lies on the shorter arc $B'C'$ of $\omega$. Prove that the circumcircle of $ABC$ and $\omega$ meet at two points.
+\end{statement}
+Note that $\angle B'OC'=180\dg-\frac12(180\dg-\angle A)=90\dg+\angle A/2$. Also, $\angle BOC = 2\angle A$. Since $\angle BOC<\angle B'OC'$, we have $2\angle A<90\dg+\angle A/2$, or $\angle A <60\dg$. Since $\seg{AL}$ is the angle bisector of $\angle BAC$, we see using the angle bisector theorem that
+\[ BL=\frac{ca}{b+c},\, LC=\frac{ab}{b+c}. \]
+Let $r$ be the radius of $\omega$ and $R$ the radius of $(ABC)$. We wish to show that $2r>R$. By Stewart on $\triangle OBC$, we get
+\[ a\left(r^2+\frac{a^2bc}{(b+c)^2}\right)=R^2a, \]
+that is
+\[ 4r^2=4R^2-\frac{4a^2bc}{(b+c)^2} \]
+However, note that by the law of sines, $a=2R\sin\angle A<R\sqrt3$ and by AM-GM, $4bc\le(b+c)^2$. Then,
+\[ 4r^2>4R^2-3R^2\cdot1=R^2, \]
+which after taking square roots becomes $2r>R$ as desired. $\blacksquare$
+	
+\end{document}

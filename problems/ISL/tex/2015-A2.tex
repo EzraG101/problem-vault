@@ -1,0 +1,38 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2015 A2}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2015 A2}
+
+\begin{statement}{2015 A2}
+	Determine all functions $f:\mathbb{Z}\rightarrow\mathbb{Z}$ with the property that
+	\[ f(x-f(y))=f(f(x))-f(y)-1 \]
+	holds for all $x,y\in\mathbb{Z}$.
+\end{statement}
+We claim the only solutions are $f\equiv-1$ and $f\equiv x+1$ which are easily seen to work. Now, plugging in $x=0,y=f(0)$ we obtain
+\[ f(-f(f(0)))=-1. \]
+Let $u=-f(f(0))$, then setting $y=u$,
+\[ f(x+1)=f(f(x)). \]
+Hence, the given equation becomes $f(x-f(y))=f(x+1)-f(y)-1$. Substituting $x=f(n)-1,y=n$ we get
+\begin{align*}
+	f(f(n)-1-f(n))&=f(f(n)-1+1)-f(n)-1\\
+	f(-1)&=f(n+1)-f(n)-1\\
+	f(-1)+1&=f(n+1)-f(n).
+\end{align*}
+Now, since the LHS is a constant, we get $f(n+1)-f(n)$ is constant for all $n$. Since the domain of $f$ is $\mathbb Z$, it follows $f(x)=kx+c$ for some $k,c\in\mathbb Z$. Substituting in the equation we find
+\[ c+1=(k^2-k)(x+y)+2kc. \]
+Setting $x+y=0$, we find $c\mid c+1$, so $c\in\{-1,1\}$. Each of these cases give the aforementioned solutions. $\blacksquare$
+	
+\end{document}

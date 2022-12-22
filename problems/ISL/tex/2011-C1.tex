@@ -1,0 +1,28 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2011 C1}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2011 C1}
+
+\begin{statement}{2011 C1}
+	Let $n > 0$ be an integer. We are given a balance and $n$ weights of weight $2^0, 2^1, \cdots, 2^{n-1}$. We are to place each of the $n$ weights on the balance, one after another, in such a way that the right pan is never heavier than the left pan. At each step we choose one of the weights that has not yet been placed on the balance, and place it on either the left pan or the right pan, until all of the weights have been placed.
+\end{statement}
+We claim the answer is $\dfrac{(2n)!}{2^n\cdot n!}$, also known as
+\[ 1\cdot3\cdots(2n-1). \]
+We proceed by induction on $n$. The answer is clear for $n=1$. Now, suppose we are given a valid sequence of weights for $n=k$. Note that removing the weight of weight $1$ and dividing the remaining weights by $2$ we get a valid sequence of weights for $n=k-1$. By the inductive hypothesis, there are $\dfrac{(2(k-1))!}{2^{k-1}\cdot (k-1)!}$ such sequences. Now, we can reach each of these from $2k-1$ sequences for $n=k$, since we may insert the one weight at $k$ moments, in $2$ positions, except for placing it on the right at the start. Hence, there are
+\[ \dfrac{(2k-2)!}{2^{k-1}\cdot (k-1)!}\cdot(2k-1)=\dfrac{(2k)!}{2^k\cdot k!} \]
+valid sequences for $n=k$. This concludes the induction. $\blacksquare$
+	
+\end{document}

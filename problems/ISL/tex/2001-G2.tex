@@ -1,0 +1,42 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2001 G2}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2001 G2}
+
+\begin{statement}{2001 G2}
+	Consider an acute-angled triangle $ABC$. Let $P$ be the foot of the altitude of triangle $ABC$ issuing from the vertex $A$, and let $O$ be the circumcenter of triangle $ABC$. Assume that $\angle C \geq \angle B+30^{\circ}$. Prove that $\angle A+\angle COP < 90^{\circ}$.
+\end{statement}
+We begin by showing the following claim:
+\begin{claim}
+	We have
+	\[ \sin\angle A\sin\angle B\cos\angle C<\frac14. \]
+\end{claim}
+\begin{proof}
+	\begin{align*}
+		\sin\angle A\sin\angle B\cos\angle C&=\frac12\sin\angle A(\sin(\angle B+\angle C)+\sin(\angle B-\angle C))\\
+		&=\frac12\sin\angle A(\sin\angle A-\sin(\angle B-\angle C))\\
+		&\le\frac12\sin\angle A\left(\sin\angle A-\frac12\right)\\
+		&<\frac14,
+	\end{align*}
+where the last inequality comes from the quadratic on $\sin\angle A$ being increasing on $[1/2,1)$ and negative when $\sin\angle A<\frac12$.
+\end{proof}
+Now, this claim implies
+\[ r^2=\frac{ab}{4\sin\angle A\sin\angle B}>ab\cos\angle C=a\cdot PC. \]
+Now, from power of a point
+\[ OP^2=r^2-PC\cdot PB=r^2-a\cdot PC+PC^2>PC^2, \]
+so $OP>PC$. Thus, looking at triangle $POC$, we get $90\dg-\angle A=\angle PCO>\angle COP$ as desired. $\blacksquare$
+	
+\end{document}

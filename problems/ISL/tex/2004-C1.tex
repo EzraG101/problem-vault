@@ -1,0 +1,55 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2004 C1}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2004 C1}
+
+\begin{statement}{2004 C1}
+	There are $10001$ students at an university. Some students 
+	join together to form several clubs (a student may belong to 
+	different clubs). Some clubs join together to form several 
+	societies (a club may belong to different societies). There 
+	are a total of $k$ societies. Suppose that the following 
+	conditions hold:
+	\begin{enumerate}
+		\item Each pair of students are in exactly one club.
+		\item For each student and each society, the student is 
+		in exactly one club of the society.
+		\item Each club has an odd number of students. In 
+		addition, a club with ${2m+1}$ students ($m$ is a 
+		positive integer) is in exactly $m$ societies.
+	\end{enumerate}
+	Find all possible values of $k$.
+\end{statement}
+The only possible $k$ is $5000$. Indeed, replace $10001$ by 
+$2K+1$, we prove the only possible $k$ is $K$. First, note that 
+$K$ is achievable by taking one club with every student in it 
+that belongs to $K$ societies. This satisfies every condition. 
+Now, we prove $k$ can only be $K$. Indeed, suppose there are 
+$2c_i+1$ students in club $i$. The first condition guarantees 
+that $\binom{2K+1}2=\sum\binom{2c_i+1}2$, or 
+\[ K(2K+1)=\sum c_i(2c_i+1). \]
+Now, from the second condition it is clear every student is in 
+exactly $k$ societies. Thus, if we add the number of students in 
+each society we obtain $k(2K+1)$. The second condition also 
+gives that, within a society, each pair of clubs is disjoint. 
+Hence, the number of students in a given society is the sum of 
+the number of students in each club in the society. Summing over 
+all societies, each club gets counted $c_i$ times, so this is 
+$\sum c_i(2c_i+1)$. Hence,
+\[ K(2K+1)=\sum c_i(2c_i+1)=k(2K+1), \]
+which implies $k=K$ as desired. $\blacksquare$
+	
+\end{document}

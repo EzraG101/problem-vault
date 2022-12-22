@@ -1,0 +1,44 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2016 G4}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2016 G4}
+
+\begin{statement}{2016 G4}
+	Let $ABC$ be a triangle with $AB = AC \neq BC$ and let $I$ be its incenter. The line $BI$ meets $AC$ at $D$, and the line through $D$ perpendicular to $AC$ meets $AI$ at $E$. Prove that the reflection of $I$ in $AC$ lies on the circumcircle of triangle $BDE$.
+\end{statement}
+We use barycentric coordinates with reference triangle $ABC$. Furthermore, let $BC=a,CA=AB=b$. Let $I'$ be the reflection of $I$ in $\seg{AC}$ and $N$ the midpoint of $\seg{II'}$. Since $D=\left(\frac a{a+b},0,\frac b{a+b}\right)$ and $\seg{DE}\perp\seg{CA}$, setting $E=(1-2t,t,t)$ we find
+\[ t=\frac{2b^3}{(a+b)(4b^2-a^2)}, \]
+so 
+\[ E=(4ab^2-a^3-a^2b:2b^3:2b^3). \]
+It is clear that $N=\left(\frac a{2b},0,1-\frac a{2b}\right)$. Then,
+\[ I' = 2N-I = (a(a+b):-b^2:3b^2-a^2). \]
+Now, let the equation of $(BDI')$ be 
+\[ -a^2yz-b^2zx-c^2xy+(x+y+z)(x\alpha+y\beta+z\gamma)=0. \]
+Since $B$ lies on the circle, $\beta=0$. From $D$ on the circle, we find
+\[ a(a+b)\alpha+b(a+b)\gamma=ab^2(b). \]
+From $I'$ on the circle and a bunch of simplification, we have
+\[ a(a+b)\alpha+(3b^2-a^2)\gamma=ab^2(b-a). \]
+Thus, we find
+\[ \alpha = \frac{2b^5}{(a+b)(a+2b)(b-a)},\,\gamma=-\frac{a^2b^2}{(a+2b)(b-a)}. \]
+Plugging in $E$ we see
+\begin{align*}
+	&-4a^2b^6-4b^5(4ab^2-a^3-a^2b)+\frac{2b^5(4ab^3-a^3-a^2b)(2b-a)}{b-a}-\frac{2a^2b^5(2b-a)(a+b)}{b-a}\\
+	&=2b^5\left(2a^3-8ab^2+\frac{8ab^3-2a^3b-8a^2b^2+2a^4}{b-a}\right)\\
+	&=2b^5(2a^3-8ab^2-2a^3+8ab^2)=0,
+\end{align*}
+so $E$ lies on the circle as desired. $\blacksquare$
+	
+\end{document}

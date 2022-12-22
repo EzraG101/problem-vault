@@ -1,0 +1,29 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2005 G4}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2005 G4}
+
+\begin{statement}{2005 G4}
+	Let $ABCD$ be a fixed convex quadrilateral with $BC=DA$ and $BC$ not parallel with $DA$. Let two variable points $E$ and $F$ lie of the sides $BC$ and $DA$, respectively and satisfy $BE=DF$. The lines $AC$ and $BD$ meet at $P$, the lines $BD$ and $EF$ meet at $Q$, the lines $EF$ and $AC$ meet at $R$.\\
+	Prove that the circumcircles of the triangles $PQR$, as $E$ and $F$ vary, have a common point other than $P$.
+\end{statement}
+We use directed angles mod $180\dg$. Let $T$ be the center of the rotation mapping $\seg{BC}$ to $\seg{DA}$, which exists since they are not parallel. Note that this rotation maps $E$ to $F$. It follows the following quadrilaterals are cyclic:
+\[ BCTP,ADTP,BETQ,DFQT,CERT,AFTR. \]
+We will show that $T\in(PQR)$. Since $T$ does not depend on $E$ and $F$, this will finish the problem. We have
+\[ \dang PTQ = \dang PTD + \dang DTQ = \dang PAD + \dang DFQ = \dang RAF + \dang AFR = -\dang FRA = \dang ARF = \dang PRQ, \]
+so $PQTR$ is cyclic as desired. $\blacksquare$
+	
+\end{document}

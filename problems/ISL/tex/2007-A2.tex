@@ -1,0 +1,37 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2007 A2}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2007 A2}
+
+\begin{statement}{2007 A2}
+	Consider those functions $ f: \mathbb{N} \mapsto \mathbb{N}$ which satisfy the condition
+	\[ f(m + n) \geq f(m) + f(f(n)) - 1 \]
+	for all $ m,n \in \mathbb{N}.$ Find all possible values of $ f(2007).$
+\end{statement}
+All possible values for $f(2007)$ are $1,2,\ldots,2008$. First, we prove these are the only ones. Note that if $a>b$ then
+\[ f(a)=f(b+(a-b))\ge f(b)+f(f(a-b))-1\ge f(b), \]
+so $f$ is non-decreasing. Now, we proceed to show $f(n)\le n+1$ for all $n$. Clearly, $f\equiv 1$ is a solution and satisfies this. So, assume $f$ is not identically $1$ and let $\alpha$ be the smallest integer such that $f(\alpha)>1$. Suppose $f(n)>n$. Then,
+\[ f(f(n))=f(f(n)-n+n)\ge f(f(n)-n)+f(f(n))-1, \]
+so $1\ge f(f(n)-n)$. Therefore, $f(n)-n<\alpha$. Thus, we find that $g(n):=f(n)-n$ is bounded from above. Let $c$ be its maximum and $k$ such that $g(k)=c$. Then, $g(2k)\le c$ so
+\[ 2k+c\ge f(2k)=f(k+k)\ge f(k)+f(f(k))-1\ge 2f(k)-1=2k+2c-1, \]
+giving $1\ge c$. Hence, $c=1$ and $f(n)-n\le 1$ as desired.\\
+Finally, note that the following function achieves $f(2007)=r$, where $r\in\{1,2,\ldots,2008\}$:
+\[ f(1)=f(2)=\ldots=f(2006)=1,\,f(2007+m)=r+m\,\forall m\ge0. \]
+We verify these satisfy the condition. If $m,n<2007$ or $m,n>2006$ this is clear. Otherwise, let $a<2007$ and $b=2007+m$. We have
+\[ f(a+2007+m)=r+m+a\ge 2r+m-2007=1+r+(r+m-2007)-1=f(a)+f(f(2007+m))-1. \]
+This concludes the proof. $\blacksquare$
+	
+\end{document}

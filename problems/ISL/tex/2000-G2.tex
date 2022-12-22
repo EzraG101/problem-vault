@@ -1,0 +1,29 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2000 G2}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2000 G2}
+
+\begin{statement}{2000 G2}
+	Two circles $ G_1$ and $ G_2$ intersect at two points $ M$ and $ N$. Let $ AB$ be the line tangent to these circles at $ A$ and $ B$, respectively, so that $ M$ lies closer to $ AB$ than $ N$. Let $ CD$ be the line parallel to $ AB$ and passing through the point $ M$, with $ C$ on $ G_1$ and $ D$ on $ G_2$. Lines $ AC$ and $ BD$ meet at $ E$; lines $ AN$ and $ CD$ meet at $ P$; lines $ BN$ and $ CD$ meet at $ Q$. Show that $ EP = EQ$.
+\end{statement}
+We use directed angles mod $180\dg$. Also, let $m(X,Y)$ denote the midpoint of $\seg{XY}$. We have
+\[ \dang BAE = \dang MCA = \dang MAB = -\dang BAM,\,
+\dang EBA = \dang BDM = \dang ABM = -\dang MBA, \]
+and $AB=AB$. Thus, by SAS we have
+\[ \triangle AMB \stackrel-\cong \triangle AEB. \]
+It follows that $AM=AE$ and $MB=EB$, so $\seg{AB}$ is the perpendicular bisector of $\seg{EM}$. Therefore, $\seg{EM}\perp\seg{AB}\parallel\seg{PQ}$, so it suffices to show $M$ is the midpoint of $\seg{PQ}$. To this end, note that $ABQP$ is a trapezoid whose non-parallel sides meet at $N$. Therefore, by homothety $m(A,B)-m(P,Q)-N$. However, by Power of a point we know $m(A,B)$ lies on the radical axis of both circles, id est $\seg{MN}$. Therefore, $m(P,Q)$ lies on $\seg{MN}$ and must therefore be $M$. Since $MP=MQ$ and $\seg{EM}\perp\seg{PQ}$, the conclusion follows. $\blacksquare$
+	
+\end{document}

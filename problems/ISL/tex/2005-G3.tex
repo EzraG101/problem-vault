@@ -1,0 +1,30 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2005 G3}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2005 G3}
+
+\begin{statement}{2005 G3}
+	Let $ABCD$ be a parallelogram. A variable line $g$ through the vertex $A$ intersects the rays $BC$ and $DC$ at the points $X$ and $Y$, respectively. Let $K$ and $L$ be the $A$-excenters of the triangles $ABX$ and $ADY$. Show that the angle $\measuredangle KCL$ is independent of the line $g$.
+\end{statement}
+Note that
+\[ \angle BKA =\frac12\angle BXA = \angle DAL. \]
+Analogously, $\angle LDA = \angle ABK$. Therefore, $\triangle ALD\sim\triangle KAB$. This implies
+\[ \frac{KA}{AL}=\frac{KB}{AD}=\frac{KB}{BC}. \]
+Now, since $\angle KAL = \angle KBC = \frac12\angle DAB$, it follows $\triangle KAL\sim\triangle KBC$. Thus, $K$ is the center of the spiral similarity mapping $\seg{AC}$ to $\seg{BL}$. Thus, it is also the center of the spiral similarity mapping $\seg{AB}$ to $\seg{CL}$, so $\triangle KAB\sim\triangle KLC$. But then,
+\[ \angle KCL = \angle KBA = 180\dg-\frac12\angle DAB, \]
+which is independent of $g$. $\blacksquare$
+	
+\end{document}

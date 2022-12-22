@@ -1,0 +1,28 @@
+\documentclass[14pt]{article}
+
+% Packages
+\usepackage{ezra}
+
+% Title
+\title{2012 G1}
+\author{Ezra Guerrero Alvarez}
+
+% Formatting
+\setlength{\parindent}{0pt}
+
+%document
+\begin{document}
+\maketitle
+	
+\section*{2012 G1}
+
+\begin{statement}{2012 G1}
+	Given triangle $ABC$ the point $J$ is the center of the excircle opposite the vertex $A$. This excircle is tangent to the side $BC$ at $M$, and to the lines $AB$ and $AC$ at $K$ and $L$, respectively. The lines $LM$ and $BJ$ meet at $F$, and the lines $KM$ and $CJ$ meet at $G$. Let $S$ be the point of intersection of the lines $AF$ and $BC$, and let $T$ be the point of intersection of the lines $AG$ and $BC$. Prove that $M$ is the midpoint of $ST$.
+\end{statement}
+Note that $AKJL$ is cyclic with diameter $\seg{AJ}$. Therefore, $\angle KJL=180\dg-\angle KAL$. Now, since $\seg{BJ}$ is the perpendicular bisector of $\seg{KM}$, $F$ is equidistant to $K$ and $M$. Hence,
+\[ \angle KFL = \angle KFM = \angle 180\dg-2\angle FMK = 2\angle KML - 180\dg = 180\dg-\angle KJL, \]
+so $F$ lies on this circle. Analogously, $G$ lies on the circle as well, so $AFKJLG$ is cyclic. Now, let $X=\seg{JM}\cap(AKL)$ and $Y=\seg{AM}\cap(AKL)$. Since $\seg{AJ}$ is a diameter, $\seg{AX}\perp\seg{XJ}\perp\seg{BC}$. Let $\infty$ be the point at infinity of line $\seg{BC}$. Because $A$ and $J$ are the midpoints of the minor and major arcs $\widehat{KL}$ we find
+\[ -1=(AJ;LK)\stackrel M=(YX;FG)\stackrel A=(M\infty,ST), \]
+implying $M$ is the midpoint of $\seg{ST}$, as desired. $\blacksquare$
+	
+\end{document}
